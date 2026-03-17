@@ -278,12 +278,17 @@ def main() -> None:
     # Find the district name column (same logic as 02_process_data)
     name_col = None
     for candidate in ["ENAME", "NAME_EN", "name_en", "DCNAME_EN",
-                      "ename", "Name", "name", "DISTRICT"]:
+                      "ename", "Name", "name", "DISTRICT", "District"]:
         if candidate in districts.columns:
             name_col = candidate
             break
     if name_col:
         districts = districts.rename(columns={name_col: "district"})
+    else:
+        raise KeyError(
+            "Could not find a district name column in district_boundaries.json. "
+            f"Available columns: {districts.columns.tolist()}"
+        )
 
     # Load bus stops
     with open(os.path.join(RAW_DIR, "kmb_bus_stops.json"), "r",

@@ -75,12 +75,17 @@ def create_choropleth(df: pd.DataFrame,
     # Find the English name column
     name_col = None
     for candidate in ["ENAME", "NAME_EN", "name_en", "DCNAME_EN",
-                      "ename", "Name", "name", "DISTRICT"]:
+                      "ename", "Name", "name", "DISTRICT", "District"]:
         if candidate in districts.columns:
             name_col = candidate
             break
     if name_col:
         districts = districts.rename(columns={name_col: "district"})
+    else:
+        raise KeyError(
+            "Could not find a district name column in the districts GeoJSON. "
+            f"Available columns: {districts.columns.tolist()}"
+        )
 
     # Normalise district names for matching
     def norm(s):

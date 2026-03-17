@@ -6,9 +6,9 @@ This script is the "AI" core of the project.  It takes the normalised
 accessibility metrics from step 03 and uses unsupervised machine
 learning to group Hong Kong's 18 districts into three categories:
 
-    🟢  High accessibility
-    🟡  Medium accessibility
-    🔴  Low accessibility   (potential "transport deserts")
+High accessibility
+Medium accessibility
+Low accessibility   (potential "transport deserts")
 
 Why K-Means?
 -----------

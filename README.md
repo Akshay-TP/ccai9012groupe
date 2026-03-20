@@ -1,141 +1,228 @@
 # AI Detection of Urban Transport Inequality (Hong Kong)
 
-This repository contains a small end-to-end pipeline (data collection → processing → accessibility scoring → clustering → visualisation) that analyses public transport accessibility across Hong Kong’s 18 districts.
+This repository provides a full analytical workflow for measuring and visualizing transport accessibility inequality across Hong Kong, with a strong focus on explainability and planning relevance.
 
-The goal of the project is to quantify potential *transport inequality* using a set of interpretable accessibility metrics, then group districts into broad categories (high / medium / low accessibility) using unsupervised learning.
+The pipeline integrates open transport APIs (KMB, Citybus, NLB), district-level boundaries, topography samples, and barrier-free ramp proxies. Outputs include district scoring, inequality diagnostics, unsupervised clustering, interactive maps, and a simulation module for recommending candidate new bus stop locations.
 
-## What this project does
+## Project Scope
 
-The pipeline produces district-level accessibility indicators from public open-data sources:
+This project answers three policy-facing questions:
 
-- Stop density and route density (per km²)
-- Per-capita access (stops per 10,000 people)
-- Estimated average walking distance to the nearest stop (grid-based approximation)
-- A composite accessibility score (weighted combination of normalised metrics)
-- A Gini coefficient to summarise inequality across districts
-- K-Means clustering to categorise districts
-- Maps and charts for reporting
+1. Which districts are currently better or worse served by bus transport?
+2. How much inequality exists in accessibility across Hong Kong?
+3. Where should planners prioritize new stop interventions for maximum impact?
 
-## Repository structure
+To support these questions, the model combines supply-side service intensity with terrain and barrier-free accessibility effects at micro-grid scale.
 
-- **`src/`**
-  - **`01_fetch_data.py`**: downloads raw datasets from Hong Kong open-data APIs into `data/raw/`
-  - **`02_process_data.py`**: cleans/merges datasets and aggregates per district → `output/district_transport_data.csv`
-  - **`03_compute_accessibility.py`**: computes accessibility metrics + composite score + Gini → `output/accessibility_scores.csv`
-  - **`04_ai_clustering.py`**: runs K-Means clustering + evaluation plots → `output/clustered_districts.csv`
-  - **`05_visualise_results.py`**: generates an interactive map and charts → `output/*.html`, `output/*.png`, `output/summary_report.csv`
+## Key Enhancements in This Version
 
-- **`data/`**
-  - **`population_by_district.csv`**: curated population + area dataset (used for per-capita and density metrics)
-  - **`README.md`**: data catalogue and source links
-  - **`raw/`** (generated, gitignored): raw downloads produced by `01_fetch_data.py`
+- Multi-operator bus integration: KMB + Citybus + New Lantao Bus.
+- Tram removal: all tram-based features were removed to focus on a unified bus-access framework.
+- Terrain-aware accessibility: elevation samples drive ruggedness penalties.
+- Barrier-free factor: ramp-proxy proximity reduces effective walking burden.
+- Fine spatial analysis: micro-grid modeling (finer than 200 m equivalent cell scale).
+- 3D visual analytics: district-level, topography, and micro-grid interactive 3D outputs.
+- Planning simulation: candidate new stop points with high/medium/low priority labels.
 
-- **`output/`** (generated, gitignored): all pipeline outputs
+## End-to-End Workflow
 
-## Requirements
+The architecture is sequential and reproducible:
 
-- Python 3.10+ recommended
-- Dependencies listed in `requirements.txt`
+1. Data ingestion (`src/01_fetch_data.py`)
+2. Spatial processing and district aggregation (`src/02_process_data.py`)
+3. Accessibility scoring + inequality (`src/03_compute_accessibility.py`)
+4. AI clustering (`src/04_ai_clustering.py`)
+5. Visual and report generation (`src/05_visualise_results.py`)
+6. New stop simulation (`simulation/01_simulate_new_stops.py`)
 
-Install dependencies:
+## Repository Structure
+
+- `src/`
+  - `01_fetch_data.py`: downloads and stores all raw inputs under `data/raw/`
+  - `02_process_data.py`: harmonizes operators and aggregates district-level transport indicators
+  - `03_compute_accessibility.py`: computes micro-grid and district-level accessibility metrics
+  - `04_ai_clustering.py`: clusters districts by normalized feature profiles
+  - `05_visualise_results.py`: generates 2D + 3D visuals and final summary report
+- `data/`
+  - `population_by_district.csv`: district population and area controls
+  - `README.md`: detailed data catalogue and schema notes
+  - `raw/`: downloaded and generated raw assets
+- `output/`
+  - all analysis outputs (scores, clusters, visuals, reports)
+- `simulation/`
+  - `01_simulate_new_stops.py`: stop candidate simulation logic
+  - `README.md`: simulation method and interpretation
+  - `output/`: simulation outputs
+
+## Environment Setup
+
+- Recommended Python: 3.10+
+- Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-## How to run
+Core libraries used:
 
-Run the scripts in order from the project root.
+- Data: pandas, numpy
+- Spatial: geopandas, shapely
+- ML: scikit-learn
+- Visual: folium, matplotlib, plotly
+- APIs: requests
 
-### 1) Download raw datasets
+## Execution Guide
+
+Run from the project root in this exact sequence.
+
+### 1) Fetch raw datasets
 
 ```bash
 python src/01_fetch_data.py
 ```
 
-This creates:
+Writes to `data/raw/`:
 
-- `data/raw/kmb_bus_stops.json`
-- `data/raw/kmb_bus_routes.json`
-- `data/raw/kmb_route_stops.json`
-- `data/raw/tram_stops.csv`
-- `data/raw/district_boundaries.json`
+- KMB stops/routes/route-stops
+- Citybus routes/route-stops/stops
+- NLB routes/route-stops/stops
+- District boundary GeoJSON
+- Elevation sample table
+- Ramp proxy JSON and point table
+- Fine population metadata (and raster download attempt, when available)
 
-### 2) Process and aggregate data
+### 2) Process and aggregate
 
 ```bash
 python src/02_process_data.py
 ```
 
-This creates:
+Creates:
 
 - `output/district_transport_data.csv`
 
-### 3) Compute accessibility metrics and inequality
+Main columns include:
+
+- `total_stops`, `total_routes`, `population`, `area_km2`
+- `kmb_stops`, `citybus_stops`, `nlb_stops`
+- `operator_diversity`
+
+### 3) Compute accessibility and inequality
 
 ```bash
 python src/03_compute_accessibility.py
 ```
 
-This creates:
+Creates:
 
 - `output/accessibility_scores.csv`
+- `output/micro_accessibility_grid.csv`
 - `output/gini_coefficient.txt`
 
-Notes:
+Highlights:
 
-- The grid-based walking distance calculation can take a short while (it overlays a ~200m grid across each district).
+- Micro-grid effective walking distance per cell.
+- Terrain and ramp adjustments to walking burden.
+- Population-weighted district metrics.
+- Composite accessibility score + rank.
 
-### 4) Run clustering (“AI” step)
+### 4) Run AI clustering
 
 ```bash
 python src/04_ai_clustering.py
 ```
 
-This creates:
+Creates:
 
 - `output/clustered_districts.csv`
 - `output/elbow_plot.png`
 - `output/silhouette_plot.png`
 
-### 5) Generate visualisations
+### 5) Generate maps, charts, and 3D outputs
 
 ```bash
 python src/05_visualise_results.py
 ```
 
-This creates:
+Creates:
 
-- `output/accessibility_map.html` (interactive choropleth)
+- `output/accessibility_map.html`
 - `output/district_scores_bar.png`
 - `output/cluster_profiles_radar.png`
+- `output/district_accessibility_3d.html`
+- `output/topography_3d.html`
+- `output/micro_accessibility_3d.html`
 - `output/summary_report.csv`
 
-## Outputs (summary)
+### 6) Run stop-placement simulation
 
-After running the full pipeline, the most important outputs are:
+```bash
+python simulation/01_simulate_new_stops.py
+```
 
-- **`output/summary_report.csv`**: consolidated table for analysis/reporting
-- **`output/accessibility_map.html`**: interactive district map with pop-ups
-- **`output/district_scores_bar.png`**: accessibility score comparison
-- **`output/cluster_profiles_radar.png`**: feature profile per cluster
-- **`output/gini_coefficient.txt`**: inequality summary statistic
+Creates:
 
-## Data sources
+- `simulation/output/candidate_new_bus_stops.csv`
+- `simulation/output/candidate_priority_summary.csv`
+- `simulation/output/new_stop_candidates_map.html`
 
-All data sources are public and are documented in `data/README.md`. In brief:
+## Accessibility Model Details
 
-- KMB bus stop / route datasets: `https://data.etabus.gov.hk`
-- Tram stop dataset: `https://data.gov.hk`
-- District boundary polygons: Home Affairs Department
-- Population and area: curated from Census & Statistics Department tables (2021)
+The composite score combines normalized features from district-level and micro-grid calculations.
 
-## Notes and assumptions
+Primary feature families:
 
-- The walking distance metric uses straight-line (Haversine) distance to the nearest stop, not road-network distance. It is intended as a practical approximation.
-- The grid size is set to ~200m (implemented as `cell_size=0.002` degrees). This is a simplification and can be adjusted in `03_compute_accessibility.py`.
-- K-Means is used because the dataset is small (18 districts) and interpretability is a priority.
+- Service intensity: stop density and route density.
+- Per-capita service: stops per 10k residents.
+- Walkability outcome: inverse of effective walking distance.
+- Operator resilience: service diversity across bus operators.
+- Inclusive access: ramp coverage over modeled population.
+- Terrain suitability: inverse ruggedness influence.
+
+The inequality summary uses a Gini coefficient over district accessibility scores.
+
+## 3D Visualization Layer
+
+The project now includes three interactive 3D views:
+
+1. District accessibility landscape
+   - Axes: stops per km², routes per km², composite score.
+   - Marker size: district population.
+   - Purpose: compare service intensity and outcomes in one view.
+
+2. Topography elevation sample
+   - Axes: longitude, latitude, elevation.
+   - Purpose: inspect terrain patterns underlying accessibility penalties.
+
+3. Micro-grid burden surface (point cloud)
+   - Axes: longitude, latitude, effective walking distance.
+   - Marker size: micro-cell population.
+   - Purpose: identify localized burden hotspots hidden by district averages.
+
+## Interpretation Notes
+
+- A district can have high stop density but still underperform if effective walking burden remains high.
+- High ramp coverage tends to improve inclusion but does not fully offset steep terrain.
+- Micro-grid results are critical for intervention targeting; district averages can hide within-district inequality.
+
+## Assumptions and Limitations
+
+- Straight-line proximity is used; full pedestrian network routing is not modeled.
+- Ramp datasets are proxy-based and may be incomplete.
+- Fine population assignment remains a model-based approximation.
+- 3D visuals are exploratory analytics, not engineering-grade simulation geometry.
+- Candidate stop outputs are decision support and require field validation.
+
+## Reproducibility Notes
+
+- API payloads can evolve over time; reruns may produce slightly different raw inputs.
+- For consistent comparisons, archive generated `data/raw/` snapshots per run date.
+- Keep script order unchanged to preserve schema compatibility.
+
+## Data Sources
+
+Detailed source links and file-level notes are documented in `data/README.md`.
 
 ## License
 
-This project is released under the MIT License (see `LICENSE`).
+Released under the MIT License. See `LICENSE`.

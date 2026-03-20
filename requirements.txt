@@ -13,6 +13,7 @@ shapely>=2.0
 folium>=0.15
 matplotlib>=3.7
 branca>=0.7
+plotly>=5.20
 
 # Machine-learning
 scikit-learn>=1.3

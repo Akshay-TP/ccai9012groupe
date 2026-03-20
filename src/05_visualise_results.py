@@ -27,7 +27,6 @@ import json
 import os
 import warnings
 
-import branca.colormap as cm
 import folium
 import geopandas as gpd
 import matplotlib
@@ -35,6 +34,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+import plotly.express as px
 
 warnings.filterwarnings("ignore", category=FutureWarning)
 
@@ -51,6 +51,9 @@ CLUSTER_COLOURS = {
     "Medium Accessibility": "#f59e0b",   # amber
     "Low Accessibility":    "#ef4444",   # red
 }
+
+MICRO_GRID_PATH = os.path.join(OUTPUT_DIR, "micro_accessibility_grid.csv")
+TOPOGRAPHY_PATH = os.path.join(RAW_DIR, "hk_topography_points.csv")
 
 
 # ===================================================================
@@ -100,7 +103,8 @@ def create_choropleth(df: pd.DataFrame,
         df_copy[["_key", "cluster_label", "accessibility_score",
                  "total_stops", "avg_walking_dist_m", "pct_within_400m",
                  "stops_per_km2", "routes_per_km2", "stops_per_10k",
-                 "population", "area_km2"]],
+                 "ramp_coverage_pct", "terrain_ruggedness",
+                 "operator_diversity", "population", "area_km2"]],
         on="_key", how="left"
     )
 
@@ -146,12 +150,14 @@ def create_choropleth(df: pd.DataFrame,
                     "total_stops", "population", "area_km2",
                     "stops_per_km2", "routes_per_km2",
                     "stops_per_10k", "avg_walking_dist_m",
-                    "pct_within_400m"],
+                    "pct_within_400m", "ramp_coverage_pct",
+                    "terrain_ruggedness", "operator_diversity"],
             aliases=["District", "Category", "Accessibility Score",
                      "Total Stops", "Population", "Area (km²)",
                      "Stops / km²", "Routes / km²",
                      "Stops / 10k People", "Avg Walk (m)",
-                     "% Within 400 m"],
+                     "% Within 400 m", "Ramp Coverage (%)",
+                     "Terrain Ruggedness", "Operator Diversity"],
         ),
     ).add_to(m)
 
@@ -250,9 +256,11 @@ def create_radar_chart(df: pd.DataFrame) -> None:
     print("  Creating radar chart …")
 
     metrics = ["norm_stops_per_km2", "norm_routes_per_km2",
-               "norm_stops_per_10k", "norm_walk_inv"]
+               "norm_stops_per_10k", "norm_walk_inv", "norm_ramp_cov",
+               "norm_terrain_inv"]
     labels = ["Stop\nDensity", "Route\nDensity",
-              "Per-Capita\nAccess", "Walking\nProximity"]
+              "Per-Capita\nAccess", "Walking\nProximity",
+              "Ramp\nCoverage", "Terrain\nSuitability"]
 
     # Compute cluster means
     cluster_means = {}
@@ -299,10 +307,11 @@ def create_summary_report(df: pd.DataFrame) -> None:
     # Keep only the most important columns
     report_cols = [
         "rank", "district", "cluster_label", "accessibility_score",
-        "total_stops", "bus_stops", "tram_stops",
+        "total_stops", "kmb_stops", "citybus_stops", "nlb_stops",
         "population", "area_km2",
         "stops_per_km2", "routes_per_km2", "stops_per_10k",
         "avg_walking_dist_m", "pct_within_400m",
+        "ramp_coverage_pct", "terrain_ruggedness", "operator_diversity",
     ]
     # Only include columns that actually exist
     report_cols = [c for c in report_cols if c in df.columns]
@@ -314,6 +323,173 @@ def create_summary_report(df: pd.DataFrame) -> None:
 
     # Print key findings
     print("\n" + "=" * 60)
+
+
+# ===================================================================
+# 5.  3D Visualisations
+# ===================================================================
+
+def create_3d_district_visual(df: pd.DataFrame) -> None:
+    """
+    Create an interactive 3D district-level scatter plot.
+
+    Axes are selected to show service intensity (x/y) and overall
+    accessibility (z), with marker size reflecting population.
+    """
+    print("  Creating 3D district visualisation …")
+
+    needed = {"district", "stops_per_km2", "routes_per_km2", "accessibility_score", "cluster_label"}
+    if not needed.issubset(df.columns):
+        print("  ! Skipping 3D district chart: required columns missing")
+        return
+
+    plot_df = df.copy()
+    if "population" not in plot_df.columns:
+        plot_df["population"] = 1
+
+    fig = px.scatter_3d(
+        plot_df,
+        x="stops_per_km2",
+        y="routes_per_km2",
+        z="accessibility_score",
+        color="cluster_label",
+        color_discrete_map=CLUSTER_COLOURS,
+        size="population",
+        size_max=38,
+        hover_name="district",
+        hover_data={
+            "stops_per_10k": ":.2f" if "stops_per_10k" in plot_df.columns else False,
+            "avg_walking_dist_m": ":.1f" if "avg_walking_dist_m" in plot_df.columns else False,
+            "pct_within_400m": ":.1f" if "pct_within_400m" in plot_df.columns else False,
+            "population": ":,.0f",
+        },
+        title="Hong Kong District Accessibility Landscape (3D)",
+    )
+    fig.update_layout(
+        scene=dict(
+            xaxis_title="Stops per km^2",
+            yaxis_title="Routes per km^2",
+            zaxis_title="Accessibility Score",
+        ),
+        legend_title="Accessibility Cluster",
+        margin=dict(l=0, r=0, b=0, t=48),
+    )
+
+    path = os.path.join(OUTPUT_DIR, "district_accessibility_3d.html")
+    fig.write_html(path, include_plotlyjs="cdn")
+    print(f"  ✓ 3D district chart saved: {path}")
+
+
+def create_3d_topography_visual(topography_path: str = TOPOGRAPHY_PATH) -> None:
+    """
+    Create an interactive 3D terrain scatter of sampled elevation points.
+
+    This visual supports interpretation of how topography can amplify
+    effective walking burden in steep areas.
+    """
+    print("  Creating 3D topography visualisation …")
+
+    if not os.path.exists(topography_path):
+        print("  ! Skipping 3D topography chart: topography file not found")
+        return
+
+    topo = pd.read_csv(topography_path)
+    expected = {"lat", "lon", "elevation_m"}
+    if topo.empty or not expected.issubset(topo.columns):
+        print("  ! Skipping 3D topography chart: invalid topography schema")
+        return
+
+    topo = topo.dropna(subset=["lat", "lon", "elevation_m"])
+    if topo.empty:
+        print("  ! Skipping 3D topography chart: no valid elevation points")
+        return
+
+    sample_limit = 12000
+    if len(topo) > sample_limit:
+        topo = topo.sample(sample_limit, random_state=42)
+
+    fig = px.scatter_3d(
+        topo,
+        x="lon",
+        y="lat",
+        z="elevation_m",
+        color="elevation_m",
+        color_continuous_scale="Viridis",
+        opacity=0.75,
+        title="Hong Kong Topography (3D Elevation Sample)",
+    )
+    fig.update_layout(
+        scene=dict(
+            xaxis_title="Longitude",
+            yaxis_title="Latitude",
+            zaxis_title="Elevation (m)",
+        ),
+        margin=dict(l=0, r=0, b=0, t=48),
+    )
+
+    path = os.path.join(OUTPUT_DIR, "topography_3d.html")
+    fig.write_html(path, include_plotlyjs="cdn")
+    print(f"  ✓ 3D topography chart saved: {path}")
+
+
+def create_3d_micro_accessibility_visual(micro_path: str = MICRO_GRID_PATH) -> None:
+    """
+    Create an interactive 3D micro-grid view where z is effective walk
+    distance, highlighting pockets of local accessibility burden.
+    """
+    print("  Creating 3D micro-grid accessibility visualisation …")
+
+    if not os.path.exists(micro_path):
+        print("  ! Skipping 3D micro-grid chart: micro grid file not found")
+        return
+
+    micro = pd.read_csv(micro_path)
+    expected = {"district", "lon", "lat", "effective_walk_dist_m", "cell_population"}
+    if micro.empty or not expected.issubset(micro.columns):
+        print("  ! Skipping 3D micro-grid chart: invalid micro-grid schema")
+        return
+
+    micro = micro.dropna(subset=["lon", "lat", "effective_walk_dist_m", "cell_population"])
+    if micro.empty:
+        print("  ! Skipping 3D micro-grid chart: no valid micro-grid records")
+        return
+
+    sample_limit = 18000
+    if len(micro) > sample_limit:
+        # Weighted sample keeps high-population cells more likely.
+        p = micro["cell_population"].values + 1e-9
+        p = p / p.sum()
+        micro = micro.sample(sample_limit, random_state=42, weights=p)
+
+    fig = px.scatter_3d(
+        micro,
+        x="lon",
+        y="lat",
+        z="effective_walk_dist_m",
+        color="district",
+        size="cell_population",
+        size_max=12,
+        opacity=0.62,
+        title="Micro-Grid Effective Walking Burden (3D)",
+        hover_data={
+            "nearest_stop_dist_m": ":.1f" if "nearest_stop_dist_m" in micro.columns else False,
+            "terrain_penalty": ":.3f" if "terrain_penalty" in micro.columns else False,
+            "nearest_ramp_dist_m": ":.1f" if "nearest_ramp_dist_m" in micro.columns else False,
+            "cell_population": ":.2f",
+        },
+    )
+    fig.update_layout(
+        scene=dict(
+            xaxis_title="Longitude",
+            yaxis_title="Latitude",
+            zaxis_title="Effective Walk Distance (m)",
+        ),
+        margin=dict(l=0, r=0, b=0, t=48),
+    )
+
+    path = os.path.join(OUTPUT_DIR, "micro_accessibility_3d.html")
+    fig.write_html(path, include_plotlyjs="cdn")
+    print(f"  ✓ 3D micro-grid chart saved: {path}")
     print("KEY FINDINGS")
     print("=" * 60)
 
@@ -372,6 +548,9 @@ def main() -> None:
     create_choropleth(df, districts_path)
     create_bar_chart(df)
     create_radar_chart(df)
+    create_3d_district_visual(df)
+    create_3d_topography_visual()
+    create_3d_micro_accessibility_visual()
     create_summary_report(df)
 
     print(f"\n{'=' * 60}")

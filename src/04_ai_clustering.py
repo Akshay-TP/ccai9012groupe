@@ -64,6 +64,9 @@ FEATURE_COLS = [
     "norm_routes_per_km2",
     "norm_stops_per_10k",
     "norm_walk_inv",
+    "norm_operator_div",
+    "norm_ramp_cov",
+    "norm_terrain_inv",
 ]
 
 # Labels we assign to each cluster, ordered from best to worst

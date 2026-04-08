@@ -1,228 +1,199 @@
 # AI Detection of Urban Transport Inequality (Hong Kong)
 
-This repository provides a full analytical workflow for measuring and visualizing transport accessibility inequality across Hong Kong, with a strong focus on explainability and planning relevance.
+This repository provides a reproducible workflow for measuring bus-access inequality in Hong Kong and generating candidate interventions.
 
-The pipeline integrates open transport APIs (KMB, Citybus, NLB), district-level boundaries, topography samples, and barrier-free ramp proxies. Outputs include district scoring, inequality diagnostics, unsupervised clustering, interactive maps, and a simulation module for recommending candidate new bus stop locations.
+The current version is a full refactor from straight-line proximity to **road-network shortest-path modelling** and **GNN-based stop optimization**.
 
-## Project Scope
+## What Changed in This Refactor
 
-This project answers three policy-facing questions:
+Previous approach:
+- Nearest-stop distances were calculated by Haversine distance.
+- Simulation used heuristic ranking and spacing rules only.
 
-1. Which districts are currently better or worse served by bus transport?
-2. How much inequality exists in accessibility across Hong Kong?
-3. Where should planners prioritize new stop interventions for maximum impact?
+Current approach:
+- Accessibility distances are now computed along the Hong Kong road graph.
+- Road graph is downloaded and cached in `data/raw/hk_roads_drive.graphml`.
+- District and micro-grid scoring uses road-network distance to nearest stop.
+- Simulation uses a graph neural network (GCN-style) with explicit reward and penalty terms.
+- Interactive outputs now include road overlays where relevant.
 
-To support these questions, the model combines supply-side service intensity with terrain and barrier-free accessibility effects at micro-grid scale.
+## Policy Questions Addressed
 
-## Key Enhancements in This Version
-
-- Multi-operator bus integration: KMB + Citybus + New Lantao Bus.
-- Tram removal: all tram-based features were removed to focus on a unified bus-access framework.
-- Terrain-aware accessibility: elevation samples drive ruggedness penalties.
-- Barrier-free factor: ramp-proxy proximity reduces effective walking burden.
-- Fine spatial analysis: micro-grid modeling (finer than 200 m equivalent cell scale).
-- 3D visual analytics: district-level, topography, and micro-grid interactive 3D outputs.
-- Planning simulation: candidate new stop points with high/medium/low priority labels.
-
-## End-to-End Workflow
-
-The architecture is sequential and reproducible:
-
-1. Data ingestion (`src/01_fetch_data.py`)
-2. Spatial processing and district aggregation (`src/02_process_data.py`)
-3. Accessibility scoring + inequality (`src/03_compute_accessibility.py`)
-4. AI clustering (`src/04_ai_clustering.py`)
-5. Visual and report generation (`src/05_visualise_results.py`)
-6. New stop simulation (`simulation/01_simulate_new_stops.py`)
+1. Which districts face the highest road-based walking burden to bus access?
+2. How unequal is access across districts after terrain and barrier-free adjustments?
+3. Where should new stops be prioritized to maximize equity gains while avoiding invalid placements?
 
 ## Repository Structure
 
 - `src/`
-  - `01_fetch_data.py`: downloads and stores all raw inputs under `data/raw/`
-  - `02_process_data.py`: harmonizes operators and aggregates district-level transport indicators
-  - `03_compute_accessibility.py`: computes micro-grid and district-level accessibility metrics
-  - `04_ai_clustering.py`: clusters districts by normalized feature profiles
-  - `05_visualise_results.py`: generates 2D + 3D visuals and final summary report
+  - `01_fetch_data.py`: downloads all raw datasets and builds road graph
+  - `02_process_data.py`: harmonizes operators and district transport aggregates
+  - `03_compute_accessibility.py`: road-based micro-grid accessibility scoring
+  - `04_ai_clustering.py`: district clustering from normalized features
+  - `05_visualise_results.py`: maps, charts, 3D visuals, and summary report
+  - `road_network.py`: shared road-graph helper utilities
 - `data/`
   - `population_by_district.csv`: district population and area controls
-  - `README.md`: detailed data catalogue and schema notes
-  - `raw/`: downloaded and generated raw assets
+  - `README.md`: dataset catalogue and schema notes
+  - `raw/`: downloaded/generated source assets
 - `output/`
-  - all analysis outputs (scores, clusters, visuals, reports)
+  - accessibility, clustering, and visual outputs
 - `simulation/`
-  - `01_simulate_new_stops.py`: stop candidate simulation logic
-  - `README.md`: simulation method and interpretation
+  - `01_simulate_new_stops.py`: GNN stop optimization
+  - `README.md`: simulation objective and interpretation
   - `output/`: simulation outputs
 
-## Environment Setup
+## Method Overview
 
-- Recommended Python: 3.10+
-- Install dependencies:
+### 1) Data Ingestion
+
+`src/01_fetch_data.py` downloads:
+- KMB, Citybus, NLB stops/routes/route-stop mappings
+- District boundaries
+- Hong Kong road network (OSM) as graph + edge GeoJSON
+- Topography sample points from HK DTM
+- Ramp proxy points from OSM/Overpass
+- WorldPop metadata (and best-effort raster download)
+
+### 2) District Aggregation
+
+`src/02_process_data.py` creates district service aggregates:
+- total stops
+- route supply
+- operator diversity
+- merged with district population/area controls
+
+### 3) Road-Based Accessibility Scoring
+
+`src/03_compute_accessibility.py`:
+- builds micro-grid cells within district polygons
+- snaps cells/stops/ramps to road nodes
+- computes shortest path distance from each cell to nearest stop (road only)
+- applies terrain and ramp factors for effective walking burden
+- population-weights cell outcomes back to district metrics
+- computes composite accessibility score and Gini coefficient
+
+### 4) Clustering
+
+`src/04_ai_clustering.py` keeps the same K-Means analysis, now fed by road-based accessibility features.
+
+### 5) Visualization
+
+`src/05_visualise_results.py` produces:
+- district choropleth (with optional road overlay)
+- score bar chart
+- cluster radar chart
+- district/topography/micro-grid 3D HTML views
+- consolidated 3D dashboard
+- summary report CSV
+
+### 6) GNN Simulation
+
+`simulation/01_simulate_new_stops.py`:
+- forms candidate graph from underserved micro-grid cells
+- trains GCN-style model on reward/penalty objective
+- penalizes water-cell placements
+- penalizes remote-cell placements
+- penalizes low-impact placements (proxy for equity score deterioration risk)
+- enforces road-network spacing between selected candidates
+- outputs candidate table, summary, map, and diagnostic images
+
+## Accessibility Feature Set
+
+Composite score uses normalized components:
+- stop density (`stops_per_km2`)
+- route density (`routes_per_km2`)
+- per-capita service (`stops_per_10k`)
+- inverse effective walking burden (`norm_walk_inv`)
+- operator diversity (`norm_operator_div`)
+- ramp coverage (`norm_ramp_cov`)
+- terrain suitability (`norm_terrain_inv`)
+
+Road distance is now the base proximity term for both district and micro-grid outcomes.
+
+## Remote Areas: Distance Cap vs Exclusion
+
+The pipeline supports both strategies in scoring and simulation:
+- `exclude_remote`: drops unreachable/far-flung cells beyond threshold
+- `distance_cap`: keeps all cells but caps distance at threshold
+
+Recommendation for Hong Kong equity reporting:
+- Use `exclude_remote` as default for core policy metrics.
+- Reason: maritime/outlying extreme cells can dominate summary statistics without representing realistic stop intervention opportunities.
+
+When to use `distance_cap`:
+- If you need full territorial inclusion and want bounded influence rather than full removal.
+
+CLI controls are available in both:
+- `src/03_compute_accessibility.py`
+- `simulation/01_simulate_new_stops.py`
+
+## Installation
+
+Python 3.10+ is recommended.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Core libraries used:
+Notable packages:
+- `geopandas`, `shapely` for spatial processing
+- `networkx`, `osmnx` for road graph modelling
+- `torch` for GNN training
+- `folium`, `matplotlib`, `plotly` for visualization
 
-- Data: pandas, numpy
-- Spatial: geopandas, shapely
-- ML: scikit-learn
-- Visual: folium, matplotlib, plotly
-- APIs: requests
+## End-to-End Run Order
 
-## Execution Guide
-
-Run from the project root in this exact sequence.
-
-### 1) Fetch raw datasets
+Run from repository root:
 
 ```bash
 python src/01_fetch_data.py
-```
-
-Writes to `data/raw/`:
-
-- KMB stops/routes/route-stops
-- Citybus routes/route-stops/stops
-- NLB routes/route-stops/stops
-- District boundary GeoJSON
-- Elevation sample table
-- Ramp proxy JSON and point table
-- Fine population metadata (and raster download attempt, when available)
-
-### 2) Process and aggregate
-
-```bash
 python src/02_process_data.py
+python src/03_compute_accessibility.py --remote-policy exclude_remote --distance-cap-m 2000
+python src/04_ai_clustering.py
+python src/05_visualise_results.py
+python simulation/01_simulate_new_stops.py --remote-policy exclude_remote --distance-cap-m 2000
 ```
 
-Creates:
+## Key Outputs
 
-- `output/district_transport_data.csv`
-
-Main columns include:
-
-- `total_stops`, `total_routes`, `population`, `area_km2`
-- `kmb_stops`, `citybus_stops`, `nlb_stops`
-- `operator_diversity`
-
-### 3) Compute accessibility and inequality
-
-```bash
-python src/03_compute_accessibility.py
-```
-
-Creates:
-
+Accessibility outputs:
 - `output/accessibility_scores.csv`
 - `output/micro_accessibility_grid.csv`
 - `output/gini_coefficient.txt`
-
-Highlights:
-
-- Micro-grid effective walking distance per cell.
-- Terrain and ramp adjustments to walking burden.
-- Population-weighted district metrics.
-- Composite accessibility score + rank.
-
-### 4) Run AI clustering
-
-```bash
-python src/04_ai_clustering.py
-```
-
-Creates:
-
 - `output/clustered_districts.csv`
-- `output/elbow_plot.png`
-- `output/silhouette_plot.png`
 
-### 5) Generate maps, charts, and 3D outputs
-
-```bash
-python src/05_visualise_results.py
-```
-
-Creates:
-
+Visualization outputs:
 - `output/accessibility_map.html`
 - `output/district_scores_bar.png`
 - `output/cluster_profiles_radar.png`
 - `output/district_accessibility_3d.html`
 - `output/topography_3d.html`
 - `output/micro_accessibility_3d.html`
+- `output/3d_dashboard.html`
 - `output/summary_report.csv`
 
-### 6) Run stop-placement simulation
-
-```bash
-python simulation/01_simulate_new_stops.py
-```
-
-Creates:
-
+Simulation outputs:
 - `simulation/output/candidate_new_bus_stops.csv`
 - `simulation/output/candidate_priority_summary.csv`
 - `simulation/output/new_stop_candidates_map.html`
-
-## Accessibility Model Details
-
-The composite score combines normalized features from district-level and micro-grid calculations.
-
-Primary feature families:
-
-- Service intensity: stop density and route density.
-- Per-capita service: stops per 10k residents.
-- Walkability outcome: inverse of effective walking distance.
-- Operator resilience: service diversity across bus operators.
-- Inclusive access: ramp coverage over modeled population.
-- Terrain suitability: inverse ruggedness influence.
-
-The inequality summary uses a Gini coefficient over district accessibility scores.
-
-## 3D Visualization Layer
-
-The project now includes three interactive 3D views:
-
-1. District accessibility landscape
-   - Axes: stops per km², routes per km², composite score.
-   - Marker size: district population.
-   - Purpose: compare service intensity and outcomes in one view.
-
-2. Topography elevation sample
-   - Axes: longitude, latitude, elevation.
-   - Purpose: inspect terrain patterns underlying accessibility penalties.
-
-3. Micro-grid burden surface (point cloud)
-   - Axes: longitude, latitude, effective walking distance.
-   - Marker size: micro-cell population.
-   - Purpose: identify localized burden hotspots hidden by district averages.
-
-## Interpretation Notes
-
-- A district can have high stop density but still underperform if effective walking burden remains high.
-- High ramp coverage tends to improve inclusion but does not fully offset steep terrain.
-- Micro-grid results are critical for intervention targeting; district averages can hide within-district inequality.
-
-## Assumptions and Limitations
-
-- Straight-line proximity is used; full pedestrian network routing is not modeled.
-- Ramp datasets are proxy-based and may be incomplete.
-- Fine population assignment remains a model-based approximation.
-- 3D visuals are exploratory analytics, not engineering-grade simulation geometry.
-- Candidate stop outputs are decision support and require field validation.
+- `simulation/output/gnn_training_loss.png`
+- `simulation/output/gnn_candidate_scores.png`
+- `simulation/output/gnn_candidate_counts_by_district.png`
 
 ## Reproducibility Notes
 
-- API payloads can evolve over time; reruns may produce slightly different raw inputs.
-- For consistent comparisons, archive generated `data/raw/` snapshots per run date.
-- Keep script order unchanged to preserve schema compatibility.
+- API responses evolve over time; archive `data/raw/` snapshots for report-grade reproducibility.
+- Keep script order unchanged unless you intentionally rebuild all downstream outputs.
+- For policy comparison experiments, hold `--remote-policy` and `--distance-cap-m` constant.
 
-## Data Sources
+## Limitations
 
-Detailed source links and file-level notes are documented in `data/README.md`.
+- Road graph uses OSM drivable network as proxy for walk-access connectivity.
+- Ramp proxy coverage depends on OSM completeness.
+- Micro-population allocation remains model-based within district totals.
+- Candidate outputs are decision support and require engineering/field validation.
 
 ## License
 
-Released under the MIT License. See `LICENSE`.
+MIT License (see `LICENSE`).

@@ -1,2 +1,5 @@
-Accessibility Gini Coefficient: 0.2731
+Accessibility Gini Coefficient: 0.3500
 Computed over 18 districts
+Distance mode: road_network
+Remote policy: exclude_remote
+Remote threshold/cap (m): 2000

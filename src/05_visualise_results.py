@@ -54,6 +54,7 @@ CLUSTER_COLOURS = {
 
 MICRO_GRID_PATH = os.path.join(OUTPUT_DIR, "micro_accessibility_grid.csv")
 TOPOGRAPHY_PATH = os.path.join(RAW_DIR, "hk_topography_points.csv")
+ROADS_EDGES_PATH = os.path.join(RAW_DIR, "hk_roads_edges.geojson")
 
 
 # ===================================================================
@@ -112,6 +113,23 @@ def create_choropleth(df: pd.DataFrame,
     hk_centre = [22.35, 114.15]
     m = folium.Map(location=hk_centre, zoom_start=11,
                    tiles="CartoDB positron")
+
+    # Optional road overlay for visual context of road-network modelling.
+    if os.path.exists(ROADS_EDGES_PATH):
+        roads = gpd.read_file(ROADS_EDGES_PATH)
+        if not roads.empty:
+            if len(roads) > 25000:
+                roads = roads.sample(25000, random_state=42)
+            folium.GeoJson(
+                data=json.loads(roads.to_json()),
+                name="Road Network",
+                style_function=lambda _: {
+                    "color": "#475569",
+                    "weight": 1,
+                    "opacity": 0.35,
+                },
+                tooltip=folium.Tooltip("Road network (sampled overlay)"),
+            ).add_to(m)
 
     # Style function — fills each polygon with the cluster colour
     def style_fn(feature):
@@ -192,6 +210,8 @@ def create_choropleth(df: pd.DataFrame,
     </div>
     """
     m.get_root().html.add_child(folium.Element(title_html))
+
+    folium.LayerControl(collapsed=False).add_to(m)
 
     path = os.path.join(OUTPUT_DIR, "accessibility_map.html")
     m.save(path)
@@ -322,6 +342,41 @@ def create_summary_report(df: pd.DataFrame) -> None:
     print(f"  ✓ Report saved: {path}")
 
     # Print key findings
+    print("\n" + "=" * 60)
+    print("KEY FINDINGS")
+    print("=" * 60)
+
+    # Read Gini
+    gini_path = os.path.join(OUTPUT_DIR, "gini_coefficient.txt")
+    if os.path.exists(gini_path):
+        with open(gini_path) as f:
+            print(f"\n  {f.read().strip()}")
+
+    # Best and worst districts
+    best = df.loc[df["accessibility_score"].idxmax()]
+    worst = df.loc[df["accessibility_score"].idxmin()]
+    print(f"\n  Most accessible district:   {best['district']} "
+          f"(score: {best['accessibility_score']:.3f})")
+    print(f"  Least accessible district:  {worst['district']} "
+          f"(score: {worst['accessibility_score']:.3f})")
+
+    ratio = best["accessibility_score"] / (worst["accessibility_score"] + 1e-9)
+    print(f"  Inequality ratio:           {ratio:.1f}x")
+
+    # Coverage stats
+    if "pct_within_400m" in df.columns:
+        avg_400 = df["pct_within_400m"].mean()
+        print(f"\n  Average % within 400 m of a stop: {avg_400:.1f}%")
+
+    # Cluster counts
+    print("\n  Cluster distribution:")
+    for label in CLUSTER_COLOURS:
+        count = (df["cluster_label"] == label).sum()
+        districts = df.loc[df["cluster_label"] == label,
+                           "district"].tolist()
+        print(f"    {label}: {count} districts - "
+              f"{', '.join(districts)}")
+
     print("\n" + "=" * 60)
 
 
@@ -490,41 +545,150 @@ def create_3d_micro_accessibility_visual(micro_path: str = MICRO_GRID_PATH) -> N
     path = os.path.join(OUTPUT_DIR, "micro_accessibility_3d.html")
     fig.write_html(path, include_plotlyjs="cdn")
     print(f"  ✓ 3D micro-grid chart saved: {path}")
-    print("KEY FINDINGS")
-    print("=" * 60)
 
-    # Read Gini
-    gini_path = os.path.join(OUTPUT_DIR, "gini_coefficient.txt")
-    if os.path.exists(gini_path):
-        with open(gini_path) as f:
-            print(f"\n  {f.read().strip()}")
 
-    # Best and worst districts
-    best = df.loc[df["accessibility_score"].idxmax()]
-    worst = df.loc[df["accessibility_score"].idxmin()]
-    print(f"\n  Most accessible district:   {best['district']} "
-          f"(score: {best['accessibility_score']:.3f})")
-    print(f"  Least accessible district:  {worst['district']} "
-          f"(score: {worst['accessibility_score']:.3f})")
+def create_3d_dashboard_page() -> None:
+        """
+        Create a single dashboard HTML page linking all generated 3D views.
+        """
+        print("  Creating consolidated 3D dashboard page …")
 
-    ratio = best["accessibility_score"] / (worst["accessibility_score"] + 1e-9)
-    print(f"  Inequality ratio:           {ratio:.1f}×")
+        dashboard_path = os.path.join(OUTPUT_DIR, "3d_dashboard.html")
 
-    # Coverage stats
-    if "pct_within_400m" in df.columns:
-        avg_400 = df["pct_within_400m"].mean()
-        print(f"\n  Average % within 400 m of a stop: {avg_400:.1f}%")
+        views = [
+                ("District Accessibility 3D", "district_accessibility_3d.html", "District-level relationship between service intensity and accessibility score."),
+                ("Topography 3D", "topography_3d.html", "Sampled elevation point cloud for terrain interpretation."),
+                ("Micro Accessibility 3D", "micro_accessibility_3d.html", "Cell-level effective walking burden surface with population weighting."),
+        ]
 
-    # Cluster counts
-    print("\n  Cluster distribution:")
-    for label in CLUSTER_COLOURS:
-        count = (df["cluster_label"] == label).sum()
-        districts = df.loc[df["cluster_label"] == label,
-                           "district"].tolist()
-        print(f"    {label}: {count} districts — "
-              f"{', '.join(districts)}")
+        cards = []
+        for title, filename, description in views:
+                full_path = os.path.join(OUTPUT_DIR, filename)
+                status = "Ready" if os.path.exists(full_path) else "Missing"
+                status_class = "ok" if status == "Ready" else "warn"
 
-    print("\n" + "=" * 60)
+                preview = (
+                        f'<iframe src="{filename}" loading="lazy" title="{title} preview"></iframe>'
+                        if status == "Ready"
+                        else '<div class="missing">Run src/05_visualise_results.py to generate this view.</div>'
+                )
+
+                cards.append(
+                        f"""
+                        <section class=\"card\">
+                                <div class=\"card-head\">
+                                        <h2>{title}</h2>
+                                        <span class=\"badge {status_class}\">{status}</span>
+                                </div>
+                                <p>{description}</p>
+                                <p><a href=\"{filename}\" target=\"_blank\" rel=\"noopener\">Open full view</a></p>
+                                {preview}
+                        </section>
+                        """
+                )
+
+        html = f"""<!DOCTYPE html>
+<html lang=\"en\">
+<head>
+    <meta charset=\"UTF-8\" />
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
+    <title>Hong Kong Accessibility 3D Dashboard</title>
+    <style>
+        :root {{
+            --bg: #f4f6f8;
+            --panel: #ffffff;
+            --text: #10212b;
+            --muted: #4d5f6a;
+            --accent: #1f6f8b;
+            --ok: #1b8f4e;
+            --warn: #b45309;
+            --border: #d6dce1;
+        }}
+        * {{ box-sizing: border-box; }}
+        body {{
+            margin: 0;
+            font-family: "Segoe UI", "Noto Sans", sans-serif;
+            background: radial-gradient(circle at 15% 10%, #d9edf2 0%, var(--bg) 55%);
+            color: var(--text);
+        }}
+        header {{
+            padding: 28px 20px 10px;
+            text-align: center;
+        }}
+        h1 {{ margin: 0; font-size: 1.8rem; }}
+        .sub {{ color: var(--muted); margin-top: 8px; }}
+        .grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 16px;
+            padding: 18px;
+            max-width: 1440px;
+            margin: 0 auto 24px;
+        }}
+        .card {{
+            background: var(--panel);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px;
+            box-shadow: 0 4px 14px rgba(9, 31, 45, 0.07);
+        }}
+        .card-head {{
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            align-items: center;
+        }}
+        .card h2 {{ margin: 0; font-size: 1.15rem; }}
+        .card p {{ color: var(--muted); margin: 10px 0; }}
+        .badge {{
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 999px;
+            padding: 4px 10px;
+            color: white;
+        }}
+        .ok {{ background: var(--ok); }}
+        .warn {{ background: var(--warn); }}
+        a {{ color: var(--accent); text-decoration: none; font-weight: 600; }}
+        a:hover {{ text-decoration: underline; }}
+        iframe {{
+            width: 100%;
+            height: 360px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: #f8fafc;
+        }}
+        .missing {{
+            width: 100%;
+            min-height: 120px;
+            border: 1px dashed var(--border);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--muted);
+            background: #fafcfd;
+            text-align: center;
+            padding: 12px;
+        }}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hong Kong Transport Accessibility 3D Dashboard</h1>
+        <p class=\"sub\">Single-page access to all 3D analytics outputs produced by the pipeline.</p>
+    </header>
+    <main class=\"grid\">
+        {''.join(cards)}
+    </main>
+</body>
+</html>
+"""
+
+        with open(dashboard_path, "w", encoding="utf-8") as f:
+                f.write(html)
+
+        print(f"  ✓ 3D dashboard page saved: {dashboard_path}")
 
 
 # ===================================================================
@@ -551,6 +715,7 @@ def main() -> None:
     create_3d_district_visual(df)
     create_3d_topography_visual()
     create_3d_micro_accessibility_visual()
+    create_3d_dashboard_page()
     create_summary_report(df)
 
     print(f"\n{'=' * 60}")

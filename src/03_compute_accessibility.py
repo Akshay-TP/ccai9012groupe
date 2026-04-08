@@ -2,16 +2,17 @@
 03_compute_accessibility.py — Calculate transport accessibility scores
 =====================================================================
 
-This script computes accessibility metrics with a finer spatial lens and
-additional physical accessibility factors.
+This script computes district accessibility using road-network shortest
+paths instead of straight-line (Haversine) distance.
 
-Enhancements compared with baseline model
------------------------------------------
-1. Finer grid resolution (~100 m) for micro-spatial analysis.
-2. Terrain-aware modelling from topography sample points.
-3. Barrier-free proxy via manmade ramp proximity.
-4. Micro-population weighting at grid-cell level.
-5. Additional factors in the composite accessibility score.
+Core modelling updates
+----------------------
+1. Grid-cell to stop distance is measured along the road graph only.
+2. Ramp proximity is measured along the same road graph.
+3. Terrain and ramp factors still adjust effective walking burden.
+4. Remote-area handling is configurable:
+   - exclude_remote (recommended)
+   - distance_cap
 
 Outputs
 -------
@@ -20,19 +21,40 @@ Outputs
 3. output/micro_accessibility_grid.csv
 
 Author:  CCAI-9012 Group E
-Date:    March 2026
+Date:    April 2026
 """
 
+from __future__ import annotations
+
+import argparse
 import json
 import os
 import warnings
+import sys
 
 import geopandas as gpd
 import numpy as np
 import pandas as pd
 from shapely.geometry import Point
 
+from road_network import (
+    build_node_balltree,
+    graph_node_arrays,
+    load_road_graph,
+    lookup_distances,
+    multi_source_shortest_path_lengths,
+    snap_points_to_nodes,
+    to_simple_undirected,
+)
+
 warnings.filterwarnings("ignore", category=FutureWarning)
+
+# Ensure Unicode status logs render on Windows terminals.
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+except Exception:
+    pass
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -174,13 +196,9 @@ def estimate_terrain_penalty(
     topo_df: pd.DataFrame,
 ) -> tuple[np.ndarray, np.ndarray]:
     """
-    Estimate terrain ruggedness and penalty at each grid point.
-
-    We use nearest-neighbour topography samples to derive a practical
-    ruggedness proxy that can be applied without heavy raster tooling.
+    Estimate terrain ruggedness and multiplicative penalty at each grid point.
     """
     if topo_df.empty:
-        # Fallback: flat terrain assumption.
         n = len(grid_lat)
         return np.zeros(n), np.ones(n)
 
@@ -190,43 +208,91 @@ def estimate_terrain_penalty(
 
     ruggedness = np.zeros(len(grid_lat))
 
-    # Chunk for memory safety.
     chunk = 500
     for i in range(0, len(grid_lat), chunk):
         glat = grid_lat[i:i + chunk]
         glon = grid_lon[i:i + chunk]
         d = haversine_np(glat[:, None], glon[:, None], t_lat[None, :], t_lon[None, :])
 
-        # Use 6 nearest topo samples to estimate local ruggedness.
         k = min(6, d.shape[1])
         idx = np.argpartition(d, k - 1, axis=1)[:, :k]
         local_ele = t_ele[idx]
         ruggedness[i:i + chunk] = np.std(local_ele, axis=1)
 
-    # Convert ruggedness to multiplicative penalty (>= 1.0).
     terrain_penalty = 1.0 + (ruggedness / 50.0)
     terrain_penalty = np.clip(terrain_penalty, 1.0, 2.5)
     return ruggedness, terrain_penalty
 
 
-def compute_microgrid_metrics(
+def normalise_key(s: str) -> str:
+    """Normalise district names for safer joins."""
+    return s.strip().lower().replace("&", "and").replace("  ", " ")
+
+
+def apply_remote_policy(
+    road_dist_m: np.ndarray,
+    policy: str,
+    distance_cap_m: float,
+) -> tuple[np.ndarray, np.ndarray]:
+    """
+    Apply remote-area handling policy to road distances.
+
+    Returns:
+    1) adjusted distance array
+    2) remote mask before policy (unreachable or beyond cap)
+    """
+    remote_mask = (~np.isfinite(road_dist_m)) | (road_dist_m > distance_cap_m)
+
+    if policy == "distance_cap":
+        capped = np.where(np.isfinite(road_dist_m), road_dist_m, distance_cap_m)
+        capped = np.minimum(capped, distance_cap_m)
+        return capped, remote_mask
+
+    if policy == "exclude_remote":
+        return road_dist_m, remote_mask
+
+    raise ValueError(f"Unknown remote policy: {policy}")
+
+
+def compute_microgrid_metrics_road(
     district_gdf: gpd.GeoDataFrame,
     stops_gdf: gpd.GeoDataFrame,
     ramps_gdf: gpd.GeoDataFrame,
     topo_df: pd.DataFrame,
     district_population: dict,
-    cell_size: float = 0.001,
+    raw_dir: str,
+    cell_size: float,
+    remote_policy: str,
+    distance_cap_m: float,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
     """
-    Compute district metrics from fine grid cells and return:
+    Compute district metrics from fine grid cells using road-network distance.
+
+    Returns:
     1. district-level summary metrics
     2. micro-grid cell table for simulation and diagnostics
     """
+    print("  ↳ Loading and indexing road graph …")
+    graph_multi = load_road_graph(raw_dir)
+    graph = to_simple_undirected(graph_multi)
+
+    node_ids, node_lats, node_lons = graph_node_arrays(graph)
+    balltree = build_node_balltree(node_lats, node_lons)
+
+    print("  ↳ Snapping existing stops to road nodes …")
     stop_lats = stops_gdf.geometry.y.values
     stop_lons = stops_gdf.geometry.x.values
+    stop_nodes, _ = snap_points_to_nodes(stop_lats, stop_lons, node_ids, balltree)
+    stop_dist_map = multi_source_shortest_path_lengths(graph, np.unique(stop_nodes))
 
-    ramp_lats = ramps_gdf.geometry.y.values if not ramps_gdf.empty else np.array([])
-    ramp_lons = ramps_gdf.geometry.x.values if not ramps_gdf.empty else np.array([])
+    if not ramps_gdf.empty:
+        print("  ↳ Snapping ramp proxies to road nodes …")
+        ramp_lats = ramps_gdf.geometry.y.values
+        ramp_lons = ramps_gdf.geometry.x.values
+        ramp_nodes, _ = snap_points_to_nodes(ramp_lats, ramp_lons, node_ids, balltree)
+        ramp_dist_map = multi_source_shortest_path_lengths(graph, np.unique(ramp_nodes))
+    else:
+        ramp_dist_map = {}
 
     district_rows = []
     micro_rows = []
@@ -242,7 +308,6 @@ def compute_microgrid_metrics(
         gx = gx.ravel()
         gy = gy.ravel()
 
-        # Filter to points inside district polygon.
         pts = gpd.GeoSeries([Point(x, y) for x, y in zip(gx, gy)], crs="EPSG:4326")
         mask = pts.within(poly)
         gx = gx[mask.values]
@@ -253,48 +318,64 @@ def compute_microgrid_metrics(
             gx = np.array([c.x])
             gy = np.array([c.y])
 
-        # Distance to nearest stop.
-        min_stop_dist = np.full(len(gx), np.inf)
-        chunk = 500
-        for i in range(0, len(stop_lats), chunk):
-            s_lat = stop_lats[i:i + chunk]
-            s_lon = stop_lons[i:i + chunk]
-            d = haversine_np(gy[:, None], gx[:, None], s_lat[None, :], s_lon[None, :])
-            min_stop_dist = np.minimum(min_stop_dist, d.min(axis=1))
+        snap_nodes, connector_dist = snap_points_to_nodes(gy, gx, node_ids, balltree)
+        road_stop_dist = lookup_distances(
+            snapped_node_ids=snap_nodes,
+            distance_map=stop_dist_map,
+            connector_m=connector_dist,
+            unreachable_value=np.inf,
+        )
 
-        # Terrain factor.
-        ruggedness, terrain_penalty = estimate_terrain_penalty(gy, gx, topo_df)
+        road_ramp_dist = lookup_distances(
+            snapped_node_ids=snap_nodes,
+            distance_map=ramp_dist_map,
+            connector_m=connector_dist,
+            unreachable_value=np.inf,
+        ) if ramp_dist_map else np.full(len(gx), np.inf)
 
-        # Ramp proximity factor: nearby ramps reduce effective effort.
-        if len(ramp_lats) > 0:
-            min_ramp_dist = np.full(len(gx), np.inf)
-            for i in range(0, len(ramp_lats), chunk):
-                r_lat = ramp_lats[i:i + chunk]
-                r_lon = ramp_lons[i:i + chunk]
-                d = haversine_np(gy[:, None], gx[:, None], r_lat[None, :], r_lon[None, :])
-                min_ramp_dist = np.minimum(min_ramp_dist, d.min(axis=1))
-        else:
-            min_ramp_dist = np.full(len(gx), np.inf)
+        road_stop_dist, remote_mask = apply_remote_policy(
+            road_dist_m=road_stop_dist,
+            policy=remote_policy,
+            distance_cap_m=distance_cap_m,
+        )
 
-        ramp_factor = np.where(min_ramp_dist <= 80.0, 0.88, 1.0)
-        effective_dist = min_stop_dist * terrain_penalty * ramp_factor
+        keep_mask = np.ones(len(gx), dtype=bool)
+        if remote_policy == "exclude_remote":
+            keep_mask = ~remote_mask
+            if not keep_mask.any():
+                # Keep one fallback point so the district remains represented.
+                finite_idx = np.where(np.isfinite(road_stop_dist))[0]
+                if len(finite_idx) > 0:
+                    best_idx = finite_idx[np.argmin(road_stop_dist[finite_idx])]
+                else:
+                    best_idx = 0
+                    road_stop_dist[best_idx] = distance_cap_m
+                keep_mask = np.zeros(len(gx), dtype=bool)
+                keep_mask[best_idx] = True
 
-        # Micro-population weighting.
-        # We approximate fine-scale settlement preference using lower ruggedness
-        # and higher stop adjacency. This gives a micro-distribution finer than
-        # district totals while staying fully reproducible from open inputs.
-        stop_adj = 1.0 / (1.0 + (min_stop_dist / 500.0))
+        gx_keep = gx[keep_mask]
+        gy_keep = gy[keep_mask]
+        stop_keep = road_stop_dist[keep_mask]
+        ramp_keep = road_ramp_dist[keep_mask]
+        remote_keep = remote_mask[keep_mask]
+
+        ruggedness, terrain_penalty = estimate_terrain_penalty(gy_keep, gx_keep, topo_df)
+
+        ramp_factor = np.where(ramp_keep <= 80.0, 0.88, 1.0)
+        effective_dist = stop_keep * terrain_penalty * ramp_factor
+
+        stop_adj = 1.0 / (1.0 + (stop_keep / 500.0))
         terrain_pref = 1.0 / terrain_penalty
         pop_weight_raw = 0.65 * stop_adj + 0.35 * terrain_pref
         pop_weight_raw = np.clip(pop_weight_raw, 1e-6, None)
 
-        district_pop = float(district_population.get(district, 0.0))
+        district_pop = float(district_population.get(normalise_key(district), 0.0))
         pop_share = pop_weight_raw / pop_weight_raw.sum()
         cell_pop = pop_share * district_pop
 
         weighted_avg_walk = float(np.sum(effective_dist * cell_pop) / (cell_pop.sum() + 1e-9))
         weighted_cov_400 = float(np.sum(cell_pop[effective_dist <= 400]) / (cell_pop.sum() + 1e-9) * 100)
-        ramp_cov = float(np.sum(cell_pop[min_ramp_dist <= 80]) / (cell_pop.sum() + 1e-9) * 100)
+        ramp_cov = float(np.sum(cell_pop[ramp_keep <= 80]) / (cell_pop.sum() + 1e-9) * 100)
         terrain_rug = float(np.average(ruggedness, weights=cell_pop + 1e-9))
 
         district_rows.append(
@@ -304,28 +385,44 @@ def compute_microgrid_metrics(
                 "pct_within_400m": round(weighted_cov_400, 1),
                 "ramp_coverage_pct": round(ramp_cov, 1),
                 "terrain_ruggedness": round(terrain_rug, 2),
-                "micro_grid_cells": int(len(gx)),
+                "micro_grid_cells": int(len(gx_keep)),
+                "remote_cells_pct": round(float(remote_mask.mean() * 100.0), 2),
+                "distance_mode": "road_network",
+                "remote_policy": remote_policy,
             }
         )
 
-        # Save cell-level metrics for simulation stage.
-        for x, y, d_raw, d_eff, cp, tr, rd in zip(gx, gy, min_stop_dist, effective_dist, cell_pop, terrain_penalty, min_ramp_dist):
+        for x, y, d_road, d_eff, cp, tr, rd, is_remote in zip(
+            gx_keep,
+            gy_keep,
+            stop_keep,
+            effective_dist,
+            cell_pop,
+            terrain_penalty,
+            ramp_keep,
+            remote_keep,
+        ):
             micro_rows.append(
                 {
                     "district": district,
                     "lon": float(x),
                     "lat": float(y),
-                    "nearest_stop_dist_m": float(d_raw),
+                    "nearest_stop_dist_m": float(d_road),
+                    "road_nearest_stop_dist_m": float(d_road),
                     "effective_walk_dist_m": float(d_eff),
                     "cell_population": float(cp),
                     "terrain_penalty": float(tr),
                     "nearest_ramp_dist_m": float(rd),
+                    "road_nearest_ramp_dist_m": float(rd),
+                    "is_remote_cell": bool(is_remote),
+                    "distance_mode": "road_network",
+                    "remote_policy": remote_policy,
                 }
             )
 
         print(
-            f"    {district:25s} avg walk={weighted_avg_walk:6.0f}m | "
-            f"cov400={weighted_cov_400:5.1f}% | ramps={ramp_cov:5.1f}%"
+            f"    {district:25s} road avg walk={weighted_avg_walk:6.0f}m | "
+            f"cov400={weighted_cov_400:5.1f}% | remote={remote_mask.mean() * 100:5.1f}%"
         )
 
     return pd.DataFrame(district_rows), pd.DataFrame(micro_rows)
@@ -346,59 +443,62 @@ def compute_composite_score(df: pd.DataFrame, weights: dict | None = None) -> pd
     return sum(df[c] * w for c, w in weights.items())
 
 
-def normalise_key(s: str) -> str:
-    """Normalise district names for safer joins."""
-    return s.strip().lower().replace("&", "and").replace("  ", " ")
-
-
-def main() -> None:
+def main(remote_policy: str, distance_cap_m: float, cell_size: float) -> None:
     print("=" * 60)
-    print("03_compute_accessibility  ·  Scoring districts")
+    print("03_compute_accessibility  ·  Scoring districts (road-network)")
     print("=" * 60)
 
     data_path = os.path.join(OUTPUT_DIR, "district_transport_data.csv")
     df = pd.read_csv(data_path)
     print(f"\nLoaded {len(df)} districts from {data_path}")
 
-    # ------------------------------------------------------------------
-    # Base density and per-capita metrics
-    # ------------------------------------------------------------------
     print("\n[1/4]  Computing baseline density metrics …")
     df["stops_per_km2"] = df["total_stops"] / df["area_km2"]
     df["routes_per_km2"] = df["total_routes"] / df["area_km2"]
     df["stops_per_10k"] = df["total_stops"] / df["population"] * 10_000
 
-    # ------------------------------------------------------------------
-    # Fine-grid spatial model with terrain + ramps
-    # ------------------------------------------------------------------
-    print("\n[2/4]  Running fine-grid terrain/ramp accessibility model …")
+    print("\n[2/4]  Running road-network micro-grid accessibility model …")
     districts = load_districts()
     stops_gdf = load_all_bus_stops()
     ramps_gdf = load_ramps()
     topo_df = load_topography_points()
 
-    pop_map = dict(zip(df["district"], df["population"]))
-    district_grid, micro_grid = compute_microgrid_metrics(
+    pop_map = {
+        normalise_key(str(d)): float(p)
+        for d, p in zip(df["district"], df["population"])
+    }
+    district_grid, micro_grid = compute_microgrid_metrics_road(
         district_gdf=districts,
         stops_gdf=stops_gdf,
         ramps_gdf=ramps_gdf,
         topo_df=topo_df,
         district_population=pop_map,
-        cell_size=0.001,
+        raw_dir=RAW_DIR,
+        cell_size=cell_size,
+        remote_policy=remote_policy,
+        distance_cap_m=distance_cap_m,
     )
 
-    # Merge district-level micro-grid metrics.
     df["_key"] = df["district"].apply(normalise_key)
     district_grid["_key"] = district_grid["district"].apply(normalise_key)
     df = df.merge(
-        district_grid[["_key", "avg_walking_dist_m", "pct_within_400m", "ramp_coverage_pct", "terrain_ruggedness", "micro_grid_cells"]],
+        district_grid[
+            [
+                "_key",
+                "avg_walking_dist_m",
+                "pct_within_400m",
+                "ramp_coverage_pct",
+                "terrain_ruggedness",
+                "micro_grid_cells",
+                "remote_cells_pct",
+                "distance_mode",
+                "remote_policy",
+            ]
+        ],
         on="_key",
         how="left",
     ).drop(columns=["_key"])
 
-    # ------------------------------------------------------------------
-    # Additional factors and normalisation
-    # ------------------------------------------------------------------
     print("\n[3/4]  Normalising features and computing composite score …")
     df["norm_stops_per_km2"] = min_max_normalise(df["stops_per_km2"])
     df["norm_routes_per_km2"] = min_max_normalise(df["routes_per_km2"])
@@ -412,9 +512,6 @@ def main() -> None:
     df = df.sort_values("accessibility_score", ascending=False)
     df["rank"] = range(1, len(df) + 1)
 
-    # ------------------------------------------------------------------
-    # Save outputs
-    # ------------------------------------------------------------------
     print("\n[4/4]  Saving accessibility outputs …")
     out_path = os.path.join(OUTPUT_DIR, "accessibility_scores.csv")
     micro_path = os.path.join(OUTPUT_DIR, "micro_accessibility_grid.csv")
@@ -427,6 +524,9 @@ def main() -> None:
     with open(gini_path, "w", encoding="utf-8") as f:
         f.write(f"Accessibility Gini Coefficient: {gini:.4f}\n")
         f.write(f"Computed over {len(df)} districts\n")
+        f.write("Distance mode: road_network\n")
+        f.write(f"Remote policy: {remote_policy}\n")
+        f.write(f"Remote threshold/cap (m): {distance_cap_m:.0f}\n")
 
     print(f"  Accessibility Gini coefficient: {gini:.4f}")
     print("=" * 60)
@@ -436,4 +536,31 @@ def main() -> None:
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(
+        description="Compute accessibility using road-network shortest-path distances.",
+    )
+    parser.add_argument(
+        "--remote-policy",
+        choices=["exclude_remote", "distance_cap"],
+        default="exclude_remote",
+        help="How to handle unreachable/far-flung grid cells.",
+    )
+    parser.add_argument(
+        "--distance-cap-m",
+        type=float,
+        default=2000.0,
+        help="Remote threshold (exclude mode) or cap value (cap mode), in metres.",
+    )
+    parser.add_argument(
+        "--grid-cell-size",
+        type=float,
+        default=0.001,
+        help="Grid cell size in degrees (~0.001 is about 100 m).",
+    )
+    args = parser.parse_args()
+
+    main(
+        remote_policy=args.remote_policy,
+        distance_cap_m=args.distance_cap_m,
+        cell_size=args.grid_cell_size,
+    )

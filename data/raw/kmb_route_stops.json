@@ -1,7 +1,7 @@
 {
   "type": "RouteStopList",
   "version": "1.0",
-  "generated_timestamp": "2026-03-17T17:32:44+08:00",
+  "generated_timestamp": "2026-03-21T00:03:12+08:00",
   "data": [
     {
       "route": "1",
@@ -177017,7 +177017,7 @@
       "bound": "I",
       "service_type": "1",
       "seq": "14",
-      "stop": "6CD0823D8B4779B6"
+      "stop": "816F423684877612"
     },
     {
       "route": "600",
@@ -178725,7 +178725,7 @@
       "bound": "I",
       "service_type": "1",
       "seq": "15",
-      "stop": "816F423684877612"
+      "stop": "6CD0823D8B4779B6"
     },
     {
       "route": "603A",

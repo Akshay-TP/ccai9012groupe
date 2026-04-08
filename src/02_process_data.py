@@ -298,13 +298,26 @@ def main() -> None:
     # ------------------------------------------------------------------
     print("\n[5/6]  Merging with population data …")
     population = load_population()
-    merged = district_stats.merge(population, on="district", how="outer", indicator=True)
 
-    if (merged["_merge"] != "both").any():
-        print("       ⚠ District name mismatches detected, applying normalised merge")
-        merged = fuzzy_merge_districts(district_stats, population)
-    else:
-        merged = merged.drop(columns=["_merge"])
+    left_keys = set(district_stats["district"].apply(normalise_district_name))
+    right_keys = set(population["district"].apply(normalise_district_name))
+
+    if left_keys != right_keys:
+        only_left = sorted(left_keys - right_keys)
+        only_right = sorted(right_keys - left_keys)
+        print("       ⚠ District name mismatches detected after normalisation")
+        if only_left:
+            print(f"       ↳ In boundary stats only: {only_left}")
+        if only_right:
+            print(f"       ↳ In population data only: {only_right}")
+
+    merged = fuzzy_merge_districts(district_stats, population)
+
+    unresolved = merged["population"].isna() | merged["area_km2"].isna()
+    if unresolved.any():
+        unresolved_names = sorted(merged.loc[unresolved, "district"].astype(str).tolist())
+        print("       ⚠ Some districts still missing population/area after normalised merge")
+        print(f"       ↳ {unresolved_names}")
 
     # ------------------------------------------------------------------
     # 6. Save

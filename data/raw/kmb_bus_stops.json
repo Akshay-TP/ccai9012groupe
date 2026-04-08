@@ -1,7 +1,7 @@
 {
   "type": "StopList",
   "version": "1.0",
-  "generated_timestamp": "2026-03-17T17:32:18+08:00",
+  "generated_timestamp": "2026-03-21T00:03:11+08:00",
   "data": [
     {
       "stop": "18492910339410B1",
@@ -18829,9 +18829,9 @@
     },
     {
       "stop": "376C4835851621D4",
-      "name_en": "TUEN MUN ROAD BBI (A15) (TM750)",
-      "name_tc": "屯門公路轉車站 (A15) (TM750)",
-      "name_sc": "屯门公路转车站 (A15) (TM750)",
+      "name_en": "TUEN MUN ROAD BBI (TM750)",
+      "name_tc": "屯門公路轉車站 (TM750)",
+      "name_sc": "屯门公路转车站 (TM750)",
       "lat": "22.362928",
       "long": "114.015522"
     },
@@ -41908,10 +41908,10 @@
       "long": "114.192958"
     },
     {
-      "stop": "6CD0823D8B4779B6",
-      "name_en": "TIN CHONG STREET (ED343)",
-      "name_tc": "電廠街 (ED343)",
-      "name_sc": "电厂街 (ED343)",
+      "stop": "816F423684877612",
+      "name_en": "TIN CHONG STREET (ED344)",
+      "name_tc": "電廠街 (ED344)",
+      "name_sc": "电厂街 (ED344)",
       "lat": "22.290036",
       "long": "114.195070"
     },
@@ -42356,10 +42356,10 @@
       "long": "114.158239"
     },
     {
-      "stop": "816F423684877612",
-      "name_en": "TIN CHONG STREET (ED344)",
-      "name_tc": "電廠街 (ED344)",
-      "name_sc": "电厂街 (ED344)",
+      "stop": "6CD0823D8B4779B6",
+      "name_en": "TIN CHONG STREET (ED343)",
+      "name_tc": "電廠街 (ED343)",
+      "name_sc": "电厂街 (ED343)",
       "lat": "22.290036",
       "long": "114.195070"
     },

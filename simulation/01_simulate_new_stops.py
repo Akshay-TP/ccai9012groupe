@@ -125,6 +125,7 @@ def classify_water_cells(micro: pd.DataFrame, max_topo_dist_m: float = 500.0) ->
     """
     topo_path = os.path.join(RAW_DIR, "hk_topography_points.csv")
     if not os.path.exists(topo_path):
+        micro["topo_nearest_m"] = np.nan
         micro["is_water_cell"] = 0
         return micro
 
@@ -134,30 +135,23 @@ def classify_water_cells(micro: pd.DataFrame, max_topo_dist_m: float = 500.0) ->
     topo = topo.dropna(subset=["lat", "lon"])
 
     if topo.empty:
+        micro["topo_nearest_m"] = np.nan
         micro["is_water_cell"] = 0
         return micro
 
-    # 0.002 degrees is about 200-220m in Hong Kong latitude.
-    bin_size = 0.002
-    topo_bins: set[tuple[int, int]] = set()
-    for lat, lon in zip(topo["lat"].values, topo["lon"].values):
-        topo_bins.add((int(np.floor(lat / bin_size)), int(np.floor(lon / bin_size))))
+    topo_coords = np.radians(topo[["lat", "lon"]].values)
+    topo_tree = BallTree(topo_coords, metric="haversine")
 
-    lat_bins = np.floor(micro["lat"].values / bin_size).astype(int)
-    lon_bins = np.floor(micro["lon"].values / bin_size).astype(int)
+    micro_coords = np.radians(micro[["lat", "lon"]].values)
+    dist_rad, _ = topo_tree.query(micro_coords, k=1)
+    nearest_m = dist_rad.ravel() * 6_371_000.0
 
-    supported = np.zeros(len(micro), dtype=bool)
-    for dlat in range(-1, 2):
-        for dlon in range(-1, 2):
-            keys = zip(lat_bins + dlat, lon_bins + dlon)
-            hits = np.array([k in topo_bins for k in keys])
-            supported |= hits
-
-    micro["is_water_cell"] = (~supported).astype(int)
+    micro["topo_nearest_m"] = nearest_m
+    micro["is_water_cell"] = (nearest_m > max_topo_dist_m).astype(int)
     water_n = int(micro["is_water_cell"].sum())
     print(
         f"    Water tagging: {water_n:,} cells tagged as water/no-topography "
-        f"(~{max_topo_dist_m:.0f} m proximity check)"
+        f"(nearest topo > {max_topo_dist_m:.0f} m)"
     )
     return micro
 
@@ -225,6 +219,35 @@ def attach_road_nodes(candidates: pd.DataFrame) -> tuple[pd.DataFrame, nx.Graph]
     candidates["road_node"] = snapped
     candidates["road_connector_m"] = connector_m
     return candidates, graph
+
+
+def apply_feasibility_filters(
+    candidates: pd.DataFrame,
+    max_road_connector_m: float,
+) -> pd.DataFrame:
+    """
+    Enforce hard feasibility constraints before GNN training.
+
+    Final candidates must be on likely land cells and sufficiently close
+    to the road network.
+    """
+    work = candidates.copy()
+    before = len(work)
+
+    work = work[work["is_water_cell"] == 0].copy()
+    removed_water = before - len(work)
+
+    before_road = len(work)
+    work = work[work["road_connector_m"] <= max_road_connector_m].copy()
+    removed_road = before_road - len(work)
+
+    print(
+        "    Feasibility filter: "
+        f"removed {removed_water:,} water cells, "
+        f"{removed_road:,} off-road cells "
+        f"(connector > {max_road_connector_m:.0f} m)"
+    )
+    return work.reset_index(drop=True)
 
 
 def build_adjacency(candidates: pd.DataFrame, k_neighbors: int = 8) -> np.ndarray:
@@ -424,6 +447,43 @@ def road_spacing_filter(
     return pd.DataFrame(selected_rows)
 
 
+def snap_selected_points_to_roads(selected: pd.DataFrame, graph: nx.Graph) -> pd.DataFrame:
+    """
+    Move selected points onto snapped road-node coordinates.
+
+    Original micro-grid centroids are preserved for traceability.
+    """
+    out = selected.copy()
+    out["original_lat"] = out["lat"]
+    out["original_lon"] = out["lon"]
+
+    snapped_lat: list[float] = []
+    snapped_lon: list[float] = []
+    missing_nodes = 0
+
+    for _, row in out.iterrows():
+        node = str(row["road_node"])
+        if graph.has_node(node):
+            node_data = graph.nodes[node]
+            snapped_lat.append(float(node_data["y"]))
+            snapped_lon.append(float(node_data["x"]))
+        else:
+            snapped_lat.append(float(row["lat"]))
+            snapped_lon.append(float(row["lon"]))
+            missing_nodes += 1
+
+    out["lat"] = snapped_lat
+    out["lon"] = snapped_lon
+
+    if missing_nodes > 0:
+        print(
+            f"    Warning: {missing_nodes:,} selected nodes were missing in graph; "
+            "kept original coordinates for those rows."
+        )
+
+    return out
+
+
 def assign_priority(score_series: pd.Series) -> pd.Series:
     """Map continuous utility scores to high / medium / low tiers."""
     q_high = score_series.quantile(0.67)
@@ -448,6 +508,8 @@ def create_candidate_map(candidates: pd.DataFrame, existing_stops: pd.DataFrame)
         if not roads.empty:
             if len(roads) > 25000:
                 roads = roads.sample(25000, random_state=42)
+            # Keep geometry only to avoid non-serializable road attributes.
+            roads = roads[["geometry"]].copy()
             folium.GeoJson(
                 data=json.loads(roads.to_json()),
                 name="Road Network",
@@ -556,11 +618,13 @@ def main(
     remote_policy: str,
     distance_cap_m: float,
     walk_target_m: float,
+    max_topo_dist_m: float,
     max_candidates: int,
     min_spacing_m: float,
     max_output: int,
     gnn_epochs: int,
     random_seed: int,
+    max_road_connector_m: float,
 ) -> None:
     print("=" * 60)
     print("Simulation  ·  GNN bus-stop optimisation")
@@ -576,7 +640,7 @@ def main(
 
     print("\n[1/6]  Loading micro-grid data and tagging water cells …")
     micro = pd.read_csv(micro_path)
-    micro = classify_water_cells(micro)
+    micro = classify_water_cells(micro, max_topo_dist_m=max_topo_dist_m)
 
     print("\n[2/6]  Building candidate pool …")
     candidates = build_candidate_pool(
@@ -592,6 +656,10 @@ def main(
 
     print("\n[3/6]  Snapping candidates to road graph and building candidate graph …")
     candidates, road_graph = attach_road_nodes(candidates)
+    candidates = apply_feasibility_filters(candidates, max_road_connector_m=max_road_connector_m)
+    if candidates.empty:
+        print("No feasible candidates after land/road filtering. Relax constraints and rerun.")
+        return
     adjacency = build_adjacency(candidates, k_neighbors=8)
 
     print("\n[4/6]  Training GNN with reward/penalty objective …")
@@ -626,6 +694,8 @@ def main(
         print("No candidate points were selected after spacing filter.")
         return
 
+    selected = snap_selected_points_to_roads(selected, road_graph)
+
     selected["priority_level"] = assign_priority(selected["priority_score"])
     selected["candidate_id"] = [f"CAND_{i:04d}" for i in range(1, len(selected) + 1)]
 
@@ -634,6 +704,8 @@ def main(
         "district",
         "lat",
         "lon",
+        "original_lat",
+        "original_lon",
         "priority_level",
         "priority_score",
         "gnn_probability",
@@ -644,6 +716,7 @@ def main(
         "remote_penalty",
         "is_water_cell",
         "is_remote_cell",
+        "topo_nearest_m",
         "effective_walk_dist_m",
         "nearest_stop_dist_m",
         "cell_population",
@@ -705,6 +778,12 @@ if __name__ == "__main__":
         help="Target effective walking distance baseline (m).",
     )
     parser.add_argument(
+        "--max-topo-dist-m",
+        type=float,
+        default=500.0,
+        help="Maximum distance to nearest topography sample before tagging as water (m).",
+    )
+    parser.add_argument(
         "--max-candidates",
         type=int,
         default=1600,
@@ -734,15 +813,23 @@ if __name__ == "__main__":
         default=42,
         help="Random seed for reproducibility.",
     )
+    parser.add_argument(
+        "--max-road-connector-m",
+        type=float,
+        default=180.0,
+        help="Hard limit for candidate-to-road snap distance (m).",
+    )
     args = parser.parse_args()
 
     main(
         remote_policy=args.remote_policy,
         distance_cap_m=args.distance_cap_m,
         walk_target_m=args.walk_target_m,
+        max_topo_dist_m=args.max_topo_dist_m,
         max_candidates=args.max_candidates,
         min_spacing_m=args.min_spacing_m,
         max_output=args.max_output,
         gnn_epochs=args.gnn_epochs,
         random_seed=args.seed,
+        max_road_connector_m=args.max_road_connector_m,
     )

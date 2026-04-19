@@ -4,6 +4,24 @@ This repository provides a reproducible workflow for measuring bus-access inequa
 
 The current version is a full refactor from straight-line proximity to **road-network shortest-path modelling** and **GNN-based stop optimization**.
 
+## Quick Start
+
+For a first-time full run, execute from repository root:
+
+```bash
+pip install -r requirements.txt
+python src/01_fetch_data.py
+python src/02_process_data.py
+python src/03_compute_accessibility.py --remote-policy exclude_remote --distance-cap-m 2000
+python src/04_ai_clustering.py
+python src/05_visualise_results.py
+python simulation/01_simulate_new_stops.py --remote-policy exclude_remote --distance-cap-m 2000
+```
+
+Road network note: `src/01_fetch_data.py` builds road graph files on first run, then reuses cache on normal reruns. Use `python src/01_fetch_data.py --refresh` only if you want updated OSM roads or if road graph files are missing/corrupted.
+
+Main outputs are written to `output/` and `simulation/output/`.
+
 ## What Changed in This Refactor
 
 Previous approach:
@@ -142,18 +160,23 @@ Notable packages:
 - `torch` for GNN training
 - `folium`, `matplotlib`, `plotly` for visualization
 
-## End-to-End Run Order
+## Running Order
 
-Run from repository root:
+Use the same command sequence shown in **Quick Start**. Conceptually, run in this exact order:
 
-```bash
-python src/01_fetch_data.py
-python src/02_process_data.py
-python src/03_compute_accessibility.py --remote-policy exclude_remote --distance-cap-m 2000
-python src/04_ai_clustering.py
-python src/05_visualise_results.py
-python simulation/01_simulate_new_stops.py --remote-policy exclude_remote --distance-cap-m 2000
-```
+1. Fetch and cache all raw inputs (including the road graph).
+2. Build district-level processed transport dataset.
+3. Compute micro-grid and district accessibility metrics.
+4. Cluster districts using the computed features.
+5. Generate maps, charts, and 3D dashboard outputs.
+6. Run stop-optimization simulation on underserved cells.
+
+Road network run timing:
+- First-time setup: run step 1 (it builds `data/raw/hk_roads_drive.graphml` and `data/raw/hk_roads_edges.geojson`).
+- Normal reruns: you can skip rebuilding roads if those files already exist; cache mode will reuse them.
+- Refresh case: rerun step 1 with `python src/01_fetch_data.py --refresh` when you want updated OSM roads or if graph files are missing/corrupted.
+
+If you only change visualization styling, rerun step 5 only. If you change accessibility logic or parameters, rerun from step 3 onward.
 
 ## Key Outputs
 

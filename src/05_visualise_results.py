@@ -120,6 +120,9 @@ def create_choropleth(df: pd.DataFrame,
         if not roads.empty:
             if len(roads) > 25000:
                 roads = roads.sample(25000, random_state=42)
+            # Keep geometry only to avoid non-serializable attributes
+            # (e.g., ndarray values in some OSM edge metadata columns).
+            roads = roads[["geometry"]].copy()
             folium.GeoJson(
                 data=json.loads(roads.to_json()),
                 name="Road Network",

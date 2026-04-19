@@ -1,0 +1,25 @@
+district,priority_level,candidate_count
+Kwai Tsing,High Priority,6
+Sha Tin,High Priority,4
+Sai Kung,High Priority,2
+Tuen Mun,High Priority,2
+Yuen Long,High Priority,2
+Central & Western,High Priority,1
+Tsuen Wan,High Priority,1
+Wan Chai,High Priority,1
+Wong Tai Sin,High Priority,1
+Kwai Tsing,Low Priority,5
+Sham Shui Po,Low Priority,5
+Sha Tin,Low Priority,4
+Central & Western,Low Priority,2
+Wong Tai Sin,Low Priority,2
+Eastern,Low Priority,1
+Kwun Tong,Low Priority,1
+Kwai Tsing,Medium Priority,5
+Yuen Long,Medium Priority,4
+Sha Tin,Medium Priority,3
+Central & Western,Medium Priority,2
+Wan Chai,Medium Priority,2
+Sham Shui Po,Medium Priority,1
+Tuen Mun,Medium Priority,1
+Wong Tai Sin,Medium Priority,1

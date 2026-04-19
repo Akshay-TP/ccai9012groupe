@@ -792,7 +792,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--min-spacing-m",
         type=float,
-        default=350.0,
+        default=300.0,
         help="Minimum spacing between selected candidates (road distance).",
     )
     parser.add_argument(
@@ -816,7 +816,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--max-road-connector-m",
         type=float,
-        default=180.0,
+        default=240.0,
         help="Hard limit for candidate-to-road snap distance (m).",
     )
     args = parser.parse_args()

@@ -1,0 +1,8500 @@
+{
+  "data": [
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "221",
+      "seq": 1
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "222",
+      "seq": 2
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "224",
+      "seq": 3
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "225",
+      "seq": 4
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "226",
+      "seq": 5
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "227",
+      "seq": 6
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "228",
+      "seq": 7
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "229",
+      "seq": 8
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "230",
+      "seq": 9
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "232",
+      "seq": 10
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "233",
+      "seq": 11
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "234",
+      "seq": 12
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "235",
+      "seq": 13
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "40",
+      "seq": 14
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "236",
+      "seq": 15
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "237",
+      "seq": 16
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "238",
+      "seq": 17
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "239",
+      "seq": 18
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "240",
+      "seq": 19
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "241",
+      "seq": 20
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "242",
+      "seq": 21
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "243",
+      "seq": 22
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "244",
+      "seq": 23
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "245",
+      "seq": 24
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "246",
+      "seq": 25
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "247",
+      "seq": 26
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "248",
+      "seq": 27
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "249",
+      "seq": 28
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "250",
+      "seq": 29
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "251",
+      "seq": 30
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "252",
+      "seq": 31
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "253",
+      "seq": 32
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "254",
+      "seq": 33
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "255",
+      "seq": 34
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "256",
+      "seq": 35
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "257",
+      "seq": 36
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "258",
+      "seq": 37
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "259",
+      "seq": 38
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "260",
+      "seq": 39
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "261",
+      "seq": 40
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "262",
+      "seq": 41
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "263",
+      "seq": 42
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "264",
+      "seq": 43
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "265",
+      "seq": 44
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "56",
+      "seq": 45
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "266",
+      "seq": 46
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "57",
+      "seq": 47
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "2",
+      "seq": 48
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "3",
+      "seq": 49
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "4",
+      "seq": 50
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "5",
+      "seq": 51
+    },
+    {
+      "routeId": "2",
+      "routeNo": "1",
+      "stopId": "305",
+      "seq": 52
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "1",
+      "seq": 1
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "2",
+      "seq": 2
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "3",
+      "seq": 3
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "4",
+      "seq": 4
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "5",
+      "seq": 5
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "6",
+      "seq": 6
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "7",
+      "seq": 7
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "8",
+      "seq": 8
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "9",
+      "seq": 9
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "10",
+      "seq": 10
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "11",
+      "seq": 11
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "12",
+      "seq": 12
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "13",
+      "seq": 13
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "14",
+      "seq": 14
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "15",
+      "seq": 15
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "16",
+      "seq": 16
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "17",
+      "seq": 17
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "18",
+      "seq": 18
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "83",
+      "seq": 19
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "19",
+      "seq": 20
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "20",
+      "seq": 21
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "21",
+      "seq": 22
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "22",
+      "seq": 23
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "23",
+      "seq": 24
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "24",
+      "seq": 25
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "25",
+      "seq": 26
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "26",
+      "seq": 27
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "27",
+      "seq": 28
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "28",
+      "seq": 29
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "32",
+      "seq": 30
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "30",
+      "seq": 31
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "31",
+      "seq": 32
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "178",
+      "seq": 33
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "33",
+      "seq": 34
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "34",
+      "seq": 35
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "35",
+      "seq": 36
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "36",
+      "seq": 37
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "37",
+      "seq": 38
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "38",
+      "seq": 39
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "39",
+      "seq": 40
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "40",
+      "seq": 41
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "41",
+      "seq": 42
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "42",
+      "seq": 43
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "58",
+      "seq": 44
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "44",
+      "seq": 45
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "45",
+      "seq": 46
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "46",
+      "seq": 47
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "47",
+      "seq": 48
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "48",
+      "seq": 49
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "49",
+      "seq": 50
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "84",
+      "seq": 51
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "51",
+      "seq": 52
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "52",
+      "seq": 53
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "53",
+      "seq": 54
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "54",
+      "seq": 55
+    },
+    {
+      "routeId": "1",
+      "routeNo": "1",
+      "stopId": "55",
+      "seq": 56
+    },
+    {
+      "routeId": "3",
+      "routeNo": "1R",
+      "stopId": "127",
+      "seq": 1
+    },
+    {
+      "routeId": "3",
+      "routeNo": "1R",
+      "stopId": "128",
+      "seq": 2
+    },
+    {
+      "routeId": "3",
+      "routeNo": "1R",
+      "stopId": "129",
+      "seq": 3
+    },
+    {
+      "routeId": "3",
+      "routeNo": "1R",
+      "stopId": "183",
+      "seq": 4
+    },
+    {
+      "routeId": "3",
+      "routeNo": "1R",
+      "stopId": "131",
+      "seq": 5
+    },
+    {
+      "routeId": "3",
+      "routeNo": "1R",
+      "stopId": "132",
+      "seq": 6
+    },
+    {
+      "routeId": "3",
+      "routeNo": "1R",
+      "stopId": "184",
+      "seq": 7
+    },
+    {
+      "routeId": "3",
+      "routeNo": "1R",
+      "stopId": "317",
+      "seq": 8
+    },
+    {
+      "routeId": "3",
+      "routeNo": "1R",
+      "stopId": "28",
+      "seq": 9
+    },
+    {
+      "routeId": "3",
+      "routeNo": "1R",
+      "stopId": "62",
+      "seq": 10
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "270",
+      "seq": 1
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "271",
+      "seq": 2
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "43",
+      "seq": 3
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "234",
+      "seq": 4
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "235",
+      "seq": 5
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "236",
+      "seq": 6
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "237",
+      "seq": 7
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "238",
+      "seq": 8
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "239",
+      "seq": 9
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "240",
+      "seq": 10
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "241",
+      "seq": 11
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "242",
+      "seq": 12
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "243",
+      "seq": 13
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "244",
+      "seq": 14
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "245",
+      "seq": 15
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "246",
+      "seq": 16
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "247",
+      "seq": 17
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "248",
+      "seq": 18
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "249",
+      "seq": 19
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "250",
+      "seq": 20
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "251",
+      "seq": 21
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "252",
+      "seq": 22
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "253",
+      "seq": 23
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "254",
+      "seq": 24
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "255",
+      "seq": 25
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "256",
+      "seq": 26
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "257",
+      "seq": 27
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "258",
+      "seq": 28
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "259",
+      "seq": 29
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "260",
+      "seq": 30
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "261",
+      "seq": 31
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "262",
+      "seq": 32
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "263",
+      "seq": 33
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "264",
+      "seq": 34
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "265",
+      "seq": 35
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "56",
+      "seq": 36
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "266",
+      "seq": 37
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "57",
+      "seq": 38
+    },
+    {
+      "routeId": "5",
+      "routeNo": "2",
+      "stopId": "305",
+      "seq": 39
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "1",
+      "seq": 1
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "6",
+      "seq": 2
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "7",
+      "seq": 3
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "8",
+      "seq": 4
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "9",
+      "seq": 5
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "10",
+      "seq": 6
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "11",
+      "seq": 7
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "12",
+      "seq": 8
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "13",
+      "seq": 9
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "14",
+      "seq": 10
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "15",
+      "seq": 11
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "16",
+      "seq": 12
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "17",
+      "seq": 13
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "18",
+      "seq": 14
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "83",
+      "seq": 15
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "19",
+      "seq": 16
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "20",
+      "seq": 17
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "21",
+      "seq": 18
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "22",
+      "seq": 19
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "23",
+      "seq": 20
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "24",
+      "seq": 21
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "25",
+      "seq": 22
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "26",
+      "seq": 23
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "27",
+      "seq": 24
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "28",
+      "seq": 25
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "31",
+      "seq": 26
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "178",
+      "seq": 27
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "33",
+      "seq": 28
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "34",
+      "seq": 29
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "35",
+      "seq": 30
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "36",
+      "seq": 31
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "37",
+      "seq": 32
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "38",
+      "seq": 33
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "39",
+      "seq": 34
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "41",
+      "seq": 35
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "42",
+      "seq": 36
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "269",
+      "seq": 37
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "59",
+      "seq": 38
+    },
+    {
+      "routeId": "4",
+      "routeNo": "2",
+      "stopId": "62",
+      "seq": 39
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "12",
+      "seq": 1
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "13",
+      "seq": 2
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "14",
+      "seq": 3
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "15",
+      "seq": 4
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "16",
+      "seq": 5
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "17",
+      "seq": 6
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "18",
+      "seq": 7
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "179",
+      "seq": 8
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "64",
+      "seq": 9
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "65",
+      "seq": 10
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "66",
+      "seq": 11
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "67",
+      "seq": 12
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "68",
+      "seq": 13
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "69",
+      "seq": 14
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "70",
+      "seq": 15
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "71",
+      "seq": 16
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "72",
+      "seq": 17
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "73",
+      "seq": 18
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "74",
+      "seq": 19
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "77",
+      "seq": 20
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "78",
+      "seq": 21
+    },
+    {
+      "routeId": "8",
+      "routeNo": "3M",
+      "stopId": "79",
+      "seq": 22
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "278",
+      "seq": 1
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "80",
+      "seq": 2
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "81",
+      "seq": 3
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "185",
+      "seq": 4
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "76",
+      "seq": 5
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "338",
+      "seq": 6
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "94",
+      "seq": 7
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "279",
+      "seq": 8
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "280",
+      "seq": 9
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "282",
+      "seq": 10
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "283",
+      "seq": 11
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "284",
+      "seq": 12
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "286",
+      "seq": 13
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "287",
+      "seq": 14
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "288",
+      "seq": 15
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "273",
+      "seq": 16
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "256",
+      "seq": 17
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "257",
+      "seq": 18
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "258",
+      "seq": 19
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "259",
+      "seq": 20
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "260",
+      "seq": 21
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "261",
+      "seq": 22
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "262",
+      "seq": 23
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "263",
+      "seq": 24
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "264",
+      "seq": 25
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "265",
+      "seq": 26
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "56",
+      "seq": 27
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "266",
+      "seq": 28
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "57",
+      "seq": 29
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "2",
+      "seq": 30
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "3",
+      "seq": 31
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "4",
+      "seq": 32
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "5",
+      "seq": 33
+    },
+    {
+      "routeId": "6",
+      "routeNo": "3M",
+      "stopId": "305",
+      "seq": 34
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "1",
+      "seq": 1
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "2",
+      "seq": 2
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "3",
+      "seq": 3
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "4",
+      "seq": 4
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "5",
+      "seq": 5
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "6",
+      "seq": 6
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "7",
+      "seq": 7
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "8",
+      "seq": 8
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "9",
+      "seq": 9
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "10",
+      "seq": 10
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "11",
+      "seq": 11
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "12",
+      "seq": 12
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "13",
+      "seq": 13
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "14",
+      "seq": 14
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "15",
+      "seq": 15
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "16",
+      "seq": 16
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "17",
+      "seq": 17
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "18",
+      "seq": 18
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "179",
+      "seq": 19
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "64",
+      "seq": 20
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "65",
+      "seq": 21
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "66",
+      "seq": 22
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "67",
+      "seq": 23
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "68",
+      "seq": 24
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "69",
+      "seq": 25
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "70",
+      "seq": 26
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "71",
+      "seq": 27
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "72",
+      "seq": 28
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "73",
+      "seq": 29
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "74",
+      "seq": 30
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "185",
+      "seq": 31
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "76",
+      "seq": 32
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "77",
+      "seq": 33
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "78",
+      "seq": 34
+    },
+    {
+      "routeId": "7",
+      "routeNo": "3M",
+      "stopId": "79",
+      "seq": 35
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "1",
+      "seq": 1
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "2",
+      "seq": 2
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "3",
+      "seq": 3
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "4",
+      "seq": 4
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "5",
+      "seq": 5
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "6",
+      "seq": 6
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "7",
+      "seq": 7
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "8",
+      "seq": 8
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "9",
+      "seq": 9
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "10",
+      "seq": 10
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "11",
+      "seq": 11
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "12",
+      "seq": 12
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "13",
+      "seq": 13
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "14",
+      "seq": 14
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "15",
+      "seq": 15
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "16",
+      "seq": 16
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "17",
+      "seq": 17
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "18",
+      "seq": 18
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "83",
+      "seq": 19
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "19",
+      "seq": 20
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "20",
+      "seq": 21
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "21",
+      "seq": 22
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "22",
+      "seq": 23
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "23",
+      "seq": 24
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "24",
+      "seq": 25
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "25",
+      "seq": 26
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "26",
+      "seq": 27
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "27",
+      "seq": 28
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "28",
+      "seq": 29
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "32",
+      "seq": 30
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "30",
+      "seq": 31
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "31",
+      "seq": 32
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "178",
+      "seq": 33
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "33",
+      "seq": 34
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "34",
+      "seq": 35
+    },
+    {
+      "routeId": "12",
+      "routeNo": "4",
+      "stopId": "240",
+      "seq": 36
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "181",
+      "seq": 1
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "246",
+      "seq": 2
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "247",
+      "seq": 3
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "248",
+      "seq": 4
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "249",
+      "seq": 5
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "250",
+      "seq": 6
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "251",
+      "seq": 7
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "252",
+      "seq": 8
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "253",
+      "seq": 9
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "254",
+      "seq": 10
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "255",
+      "seq": 11
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "256",
+      "seq": 12
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "257",
+      "seq": 13
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "258",
+      "seq": 14
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "259",
+      "seq": 15
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "260",
+      "seq": 16
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "261",
+      "seq": 17
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "262",
+      "seq": 18
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "263",
+      "seq": 19
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "264",
+      "seq": 20
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "265",
+      "seq": 21
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "56",
+      "seq": 22
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "266",
+      "seq": 23
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "57",
+      "seq": 24
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "2",
+      "seq": 25
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "3",
+      "seq": 26
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "4",
+      "seq": 27
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "5",
+      "seq": 28
+    },
+    {
+      "routeId": "10",
+      "routeNo": "4",
+      "stopId": "305",
+      "seq": 29
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "240",
+      "seq": 1
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "241",
+      "seq": 2
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "242",
+      "seq": 3
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "243",
+      "seq": 4
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "244",
+      "seq": 5
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "245",
+      "seq": 6
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "246",
+      "seq": 7
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "247",
+      "seq": 8
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "248",
+      "seq": 9
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "249",
+      "seq": 10
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "250",
+      "seq": 11
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "251",
+      "seq": 12
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "252",
+      "seq": 13
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "253",
+      "seq": 14
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "254",
+      "seq": 15
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "255",
+      "seq": 16
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "256",
+      "seq": 17
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "257",
+      "seq": 18
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "258",
+      "seq": 19
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "259",
+      "seq": 20
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "260",
+      "seq": 21
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "261",
+      "seq": 22
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "262",
+      "seq": 23
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "263",
+      "seq": 24
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "264",
+      "seq": 25
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "265",
+      "seq": 26
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "56",
+      "seq": 27
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "266",
+      "seq": 28
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "57",
+      "seq": 29
+    },
+    {
+      "routeId": "11",
+      "routeNo": "4",
+      "stopId": "305",
+      "seq": 30
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "1",
+      "seq": 1
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "6",
+      "seq": 2
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "7",
+      "seq": 3
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "8",
+      "seq": 4
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "9",
+      "seq": 5
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "10",
+      "seq": 6
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "11",
+      "seq": 7
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "12",
+      "seq": 8
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "13",
+      "seq": 9
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "14",
+      "seq": 10
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "15",
+      "seq": 11
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "16",
+      "seq": 12
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "17",
+      "seq": 13
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "18",
+      "seq": 14
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "83",
+      "seq": 15
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "19",
+      "seq": 16
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "20",
+      "seq": 17
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "21",
+      "seq": 18
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "22",
+      "seq": 19
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "23",
+      "seq": 20
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "24",
+      "seq": 21
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "25",
+      "seq": 22
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "26",
+      "seq": 23
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "27",
+      "seq": 24
+    },
+    {
+      "routeId": "9",
+      "routeNo": "4",
+      "stopId": "181",
+      "seq": 25
+    },
+    {
+      "routeId": "72",
+      "routeNo": "7S",
+      "stopId": "56",
+      "seq": 1
+    },
+    {
+      "routeId": "72",
+      "routeNo": "7S",
+      "stopId": "2",
+      "seq": 2
+    },
+    {
+      "routeId": "72",
+      "routeNo": "7S",
+      "stopId": "3",
+      "seq": 3
+    },
+    {
+      "routeId": "72",
+      "routeNo": "7S",
+      "stopId": "4",
+      "seq": 4
+    },
+    {
+      "routeId": "72",
+      "routeNo": "7S",
+      "stopId": "5",
+      "seq": 5
+    },
+    {
+      "routeId": "72",
+      "routeNo": "7S",
+      "stopId": "305",
+      "seq": 6
+    },
+    {
+      "routeId": "70",
+      "routeNo": "7S",
+      "stopId": "1",
+      "seq": 1
+    },
+    {
+      "routeId": "70",
+      "routeNo": "7S",
+      "stopId": "2",
+      "seq": 2
+    },
+    {
+      "routeId": "70",
+      "routeNo": "7S",
+      "stopId": "3",
+      "seq": 3
+    },
+    {
+      "routeId": "70",
+      "routeNo": "7S",
+      "stopId": "4",
+      "seq": 4
+    },
+    {
+      "routeId": "70",
+      "routeNo": "7S",
+      "stopId": "5",
+      "seq": 5
+    },
+    {
+      "routeId": "70",
+      "routeNo": "7S",
+      "stopId": "56",
+      "seq": 6
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "240",
+      "seq": 1
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "241",
+      "seq": 2
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "242",
+      "seq": 3
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "243",
+      "seq": 4
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "244",
+      "seq": 5
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "245",
+      "seq": 6
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "246",
+      "seq": 7
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "247",
+      "seq": 8
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "248",
+      "seq": 9
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "249",
+      "seq": 10
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "250",
+      "seq": 11
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "251",
+      "seq": 12
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "252",
+      "seq": 13
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "253",
+      "seq": 14
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "254",
+      "seq": 15
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "255",
+      "seq": 16
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "179",
+      "seq": 17
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "64",
+      "seq": 18
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "65",
+      "seq": 19
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "66",
+      "seq": 20
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "67",
+      "seq": 21
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "68",
+      "seq": 22
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "69",
+      "seq": 23
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "70",
+      "seq": 24
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "71",
+      "seq": 25
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "72",
+      "seq": 26
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "73",
+      "seq": 27
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "74",
+      "seq": 28
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "77",
+      "seq": 29
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "78",
+      "seq": 30
+    },
+    {
+      "routeId": "18",
+      "routeNo": "11",
+      "stopId": "79",
+      "seq": 31
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "221",
+      "seq": 1
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "222",
+      "seq": 2
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "224",
+      "seq": 3
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "225",
+      "seq": 4
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "226",
+      "seq": 5
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "227",
+      "seq": 6
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "228",
+      "seq": 7
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "229",
+      "seq": 8
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "230",
+      "seq": 9
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "232",
+      "seq": 10
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "233",
+      "seq": 11
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "234",
+      "seq": 12
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "235",
+      "seq": 13
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "40",
+      "seq": 14
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "236",
+      "seq": 15
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "237",
+      "seq": 16
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "238",
+      "seq": 17
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "239",
+      "seq": 18
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "240",
+      "seq": 19
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "241",
+      "seq": 20
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "242",
+      "seq": 21
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "243",
+      "seq": 22
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "32",
+      "seq": 23
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "30",
+      "seq": 24
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "244",
+      "seq": 25
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "245",
+      "seq": 26
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "246",
+      "seq": 27
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "247",
+      "seq": 28
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "248",
+      "seq": 29
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "249",
+      "seq": 30
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "250",
+      "seq": 31
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "251",
+      "seq": 32
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "252",
+      "seq": 33
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "253",
+      "seq": 34
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "254",
+      "seq": 35
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "255",
+      "seq": 36
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "179",
+      "seq": 37
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "64",
+      "seq": 38
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "65",
+      "seq": 39
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "66",
+      "seq": 40
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "67",
+      "seq": 41
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "68",
+      "seq": 42
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "69",
+      "seq": 43
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "70",
+      "seq": 44
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "71",
+      "seq": 45
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "72",
+      "seq": 46
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "73",
+      "seq": 47
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "74",
+      "seq": 48
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "185",
+      "seq": 49
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "76",
+      "seq": 50
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "77",
+      "seq": 51
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "78",
+      "seq": 52
+    },
+    {
+      "routeId": "14",
+      "routeNo": "11",
+      "stopId": "79",
+      "seq": 53
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "40",
+      "seq": 1
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "236",
+      "seq": 2
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "237",
+      "seq": 3
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "238",
+      "seq": 4
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "239",
+      "seq": 5
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "240",
+      "seq": 6
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "241",
+      "seq": 7
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "242",
+      "seq": 8
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "243",
+      "seq": 9
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "32",
+      "seq": 10
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "30",
+      "seq": 11
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "244",
+      "seq": 12
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "245",
+      "seq": 13
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "246",
+      "seq": 14
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "247",
+      "seq": 15
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "248",
+      "seq": 16
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "249",
+      "seq": 17
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "250",
+      "seq": 18
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "251",
+      "seq": 19
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "252",
+      "seq": 20
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "253",
+      "seq": 21
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "254",
+      "seq": 22
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "255",
+      "seq": 23
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "179",
+      "seq": 24
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "64",
+      "seq": 25
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "65",
+      "seq": 26
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "66",
+      "seq": 27
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "67",
+      "seq": 28
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "68",
+      "seq": 29
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "69",
+      "seq": 30
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "70",
+      "seq": 31
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "71",
+      "seq": 32
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "72",
+      "seq": 33
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "73",
+      "seq": 34
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "74",
+      "seq": 35
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "77",
+      "seq": 36
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "78",
+      "seq": 37
+    },
+    {
+      "routeId": "17",
+      "routeNo": "11",
+      "stopId": "79",
+      "seq": 38
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "278",
+      "seq": 1
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "80",
+      "seq": 2
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "81",
+      "seq": 3
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "185",
+      "seq": 4
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "76",
+      "seq": 5
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "338",
+      "seq": 6
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "94",
+      "seq": 7
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "279",
+      "seq": 8
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "280",
+      "seq": 9
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "282",
+      "seq": 10
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "283",
+      "seq": 11
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "284",
+      "seq": 12
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "286",
+      "seq": 13
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "287",
+      "seq": 14
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "288",
+      "seq": 15
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "273",
+      "seq": 16
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "83",
+      "seq": 17
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "19",
+      "seq": 18
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "20",
+      "seq": 19
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "21",
+      "seq": 20
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "22",
+      "seq": 21
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "23",
+      "seq": 22
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "24",
+      "seq": 23
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "25",
+      "seq": 24
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "26",
+      "seq": 25
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "27",
+      "seq": 26
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "28",
+      "seq": 27
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "32",
+      "seq": 28
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "30",
+      "seq": 29
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "31",
+      "seq": 30
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "178",
+      "seq": 31
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "33",
+      "seq": 32
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "34",
+      "seq": 33
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "35",
+      "seq": 34
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "36",
+      "seq": 35
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "37",
+      "seq": 36
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "38",
+      "seq": 37
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "39",
+      "seq": 38
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "40",
+      "seq": 39
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "41",
+      "seq": 40
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "42",
+      "seq": 41
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "58",
+      "seq": 42
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "44",
+      "seq": 43
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "45",
+      "seq": 44
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "46",
+      "seq": 45
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "47",
+      "seq": 46
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "48",
+      "seq": 47
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "49",
+      "seq": 48
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "84",
+      "seq": 49
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "51",
+      "seq": 50
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "52",
+      "seq": 51
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "53",
+      "seq": 52
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "54",
+      "seq": 53
+    },
+    {
+      "routeId": "13",
+      "routeNo": "11",
+      "stopId": "55",
+      "seq": 54
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "278",
+      "seq": 1
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "80",
+      "seq": 2
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "81",
+      "seq": 3
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "94",
+      "seq": 4
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "279",
+      "seq": 5
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "280",
+      "seq": 6
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "282",
+      "seq": 7
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "283",
+      "seq": 8
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "284",
+      "seq": 9
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "286",
+      "seq": 10
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "287",
+      "seq": 11
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "288",
+      "seq": 12
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "273",
+      "seq": 13
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "83",
+      "seq": 14
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "19",
+      "seq": 15
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "20",
+      "seq": 16
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "21",
+      "seq": 17
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "22",
+      "seq": 18
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "23",
+      "seq": 19
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "24",
+      "seq": 20
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "25",
+      "seq": 21
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "26",
+      "seq": 22
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "27",
+      "seq": 23
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "28",
+      "seq": 24
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "32",
+      "seq": 25
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "30",
+      "seq": 26
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "31",
+      "seq": 27
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "178",
+      "seq": 28
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "33",
+      "seq": 29
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "34",
+      "seq": 30
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "35",
+      "seq": 31
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "36",
+      "seq": 32
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "37",
+      "seq": 33
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "38",
+      "seq": 34
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "39",
+      "seq": 35
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "41",
+      "seq": 36
+    },
+    {
+      "routeId": "15",
+      "routeNo": "11A",
+      "stopId": "40",
+      "seq": 37
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "40",
+      "seq": 1
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "235",
+      "seq": 2
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "236",
+      "seq": 3
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "237",
+      "seq": 4
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "238",
+      "seq": 5
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "239",
+      "seq": 6
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "240",
+      "seq": 7
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "241",
+      "seq": 8
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "242",
+      "seq": 9
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "243",
+      "seq": 10
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "32",
+      "seq": 11
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "30",
+      "seq": 12
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "244",
+      "seq": 13
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "245",
+      "seq": 14
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "246",
+      "seq": 15
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "247",
+      "seq": 16
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "248",
+      "seq": 17
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "249",
+      "seq": 18
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "250",
+      "seq": 19
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "251",
+      "seq": 20
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "252",
+      "seq": 21
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "253",
+      "seq": 22
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "254",
+      "seq": 23
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "255",
+      "seq": 24
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "179",
+      "seq": 25
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "64",
+      "seq": 26
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "65",
+      "seq": 27
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "66",
+      "seq": 28
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "67",
+      "seq": 29
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "68",
+      "seq": 30
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "69",
+      "seq": 31
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "70",
+      "seq": 32
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "71",
+      "seq": 33
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "72",
+      "seq": 34
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "73",
+      "seq": 35
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "74",
+      "seq": 36
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "77",
+      "seq": 37
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "78",
+      "seq": 38
+    },
+    {
+      "routeId": "16",
+      "routeNo": "11A",
+      "stopId": "79",
+      "seq": 39
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "221",
+      "seq": 1
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "222",
+      "seq": 2
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "224",
+      "seq": 3
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "225",
+      "seq": 4
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "226",
+      "seq": 5
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "227",
+      "seq": 6
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "228",
+      "seq": 7
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "229",
+      "seq": 8
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "230",
+      "seq": 9
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "232",
+      "seq": 10
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "233",
+      "seq": 11
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "59",
+      "seq": 12
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "60",
+      "seq": 13
+    },
+    {
+      "routeId": "20",
+      "routeNo": "21",
+      "stopId": "62",
+      "seq": 14
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "270",
+      "seq": 1
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "271",
+      "seq": 2
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "43",
+      "seq": 3
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "44",
+      "seq": 4
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "45",
+      "seq": 5
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "46",
+      "seq": 6
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "47",
+      "seq": 7
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "48",
+      "seq": 8
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "49",
+      "seq": 9
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "84",
+      "seq": 10
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "51",
+      "seq": 11
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "52",
+      "seq": 12
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "53",
+      "seq": 13
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "54",
+      "seq": 14
+    },
+    {
+      "routeId": "19",
+      "routeNo": "21",
+      "stopId": "55",
+      "seq": 15
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "270",
+      "seq": 1
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "271",
+      "seq": 2
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "43",
+      "seq": 3
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "234",
+      "seq": 4
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "235",
+      "seq": 5
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "236",
+      "seq": 6
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "237",
+      "seq": 7
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "238",
+      "seq": 8
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "239",
+      "seq": 9
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "240",
+      "seq": 10
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "241",
+      "seq": 11
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "242",
+      "seq": 12
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "243",
+      "seq": 13
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "244",
+      "seq": 14
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "245",
+      "seq": 15
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "246",
+      "seq": 16
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "247",
+      "seq": 17
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "248",
+      "seq": 18
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "249",
+      "seq": 19
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "250",
+      "seq": 20
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "251",
+      "seq": 21
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "252",
+      "seq": 22
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "253",
+      "seq": 23
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "254",
+      "seq": 24
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "255",
+      "seq": 25
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "179",
+      "seq": 26
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "64",
+      "seq": 27
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "65",
+      "seq": 28
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "66",
+      "seq": 29
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "67",
+      "seq": 30
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "68",
+      "seq": 31
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "69",
+      "seq": 32
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "70",
+      "seq": 33
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "71",
+      "seq": 34
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "72",
+      "seq": 35
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "73",
+      "seq": 36
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "74",
+      "seq": 37
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "77",
+      "seq": 38
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "78",
+      "seq": 39
+    },
+    {
+      "routeId": "22",
+      "routeNo": "23",
+      "stopId": "318",
+      "seq": 40
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "317",
+      "seq": 1
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "81",
+      "seq": 2
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "94",
+      "seq": 3
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "279",
+      "seq": 4
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "280",
+      "seq": 5
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "282",
+      "seq": 6
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "283",
+      "seq": 7
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "284",
+      "seq": 8
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "286",
+      "seq": 9
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "287",
+      "seq": 10
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "288",
+      "seq": 11
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "273",
+      "seq": 12
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "83",
+      "seq": 13
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "19",
+      "seq": 14
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "20",
+      "seq": 15
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "21",
+      "seq": 16
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "22",
+      "seq": 17
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "23",
+      "seq": 18
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "24",
+      "seq": 19
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "25",
+      "seq": 20
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "26",
+      "seq": 21
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "27",
+      "seq": 22
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "28",
+      "seq": 23
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "31",
+      "seq": 24
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "178",
+      "seq": 25
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "33",
+      "seq": 26
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "34",
+      "seq": 27
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "35",
+      "seq": 28
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "36",
+      "seq": 29
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "37",
+      "seq": 30
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "38",
+      "seq": 31
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "39",
+      "seq": 32
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "41",
+      "seq": 33
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "42",
+      "seq": 34
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "269",
+      "seq": 35
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "59",
+      "seq": 36
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "60",
+      "seq": 37
+    },
+    {
+      "routeId": "21",
+      "routeNo": "23",
+      "stopId": "62",
+      "seq": 38
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "317",
+      "seq": 1
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "80",
+      "seq": 2
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "81",
+      "seq": 3
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "185",
+      "seq": 4
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "289",
+      "seq": 5
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "76",
+      "seq": 6
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "90",
+      "seq": 7
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "91",
+      "seq": 8
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "94",
+      "seq": 9
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "279",
+      "seq": 10
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "280",
+      "seq": 11
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "282",
+      "seq": 12
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "283",
+      "seq": 13
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "92",
+      "seq": 14
+    },
+    {
+      "routeId": "23",
+      "routeNo": "34",
+      "stopId": "291",
+      "seq": 15
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "93",
+      "seq": 1
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "292",
+      "seq": 2
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "68",
+      "seq": 3
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "69",
+      "seq": 4
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "70",
+      "seq": 5
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "71",
+      "seq": 6
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "72",
+      "seq": 7
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "73",
+      "seq": 8
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "91",
+      "seq": 9
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "74",
+      "seq": 10
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "185",
+      "seq": 11
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "289",
+      "seq": 12
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "76",
+      "seq": 13
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "77",
+      "seq": 14
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "78",
+      "seq": 15
+    },
+    {
+      "routeId": "24",
+      "routeNo": "34",
+      "stopId": "318",
+      "seq": 16
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "317",
+      "seq": 1
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "80",
+      "seq": 2
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "81",
+      "seq": 3
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "185",
+      "seq": 4
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "89",
+      "seq": 5
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "76",
+      "seq": 6
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "90",
+      "seq": 7
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "73",
+      "seq": 8
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "279",
+      "seq": 9
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "71",
+      "seq": 10
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "70",
+      "seq": 11
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "283",
+      "seq": 12
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "284",
+      "seq": 13
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "286",
+      "seq": 14
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "68",
+      "seq": 15
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "283",
+      "seq": 16
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "70",
+      "seq": 17
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "71",
+      "seq": 18
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "72",
+      "seq": 19
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "94",
+      "seq": 20
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "74",
+      "seq": 21
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "185",
+      "seq": 22
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "89",
+      "seq": 23
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "76",
+      "seq": 24
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "77",
+      "seq": 25
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "78",
+      "seq": 26
+    },
+    {
+      "routeId": "71",
+      "routeNo": "34S",
+      "stopId": "317",
+      "seq": 27
+    },
+    {
+      "routeId": "102",
+      "routeNo": "36",
+      "stopId": "328",
+      "seq": 1
+    },
+    {
+      "routeId": "102",
+      "routeNo": "36",
+      "stopId": "293",
+      "seq": 2
+    },
+    {
+      "routeId": "102",
+      "routeNo": "36",
+      "stopId": "96",
+      "seq": 3
+    },
+    {
+      "routeId": "102",
+      "routeNo": "36",
+      "stopId": "97",
+      "seq": 4
+    },
+    {
+      "routeId": "102",
+      "routeNo": "36",
+      "stopId": "294",
+      "seq": 5
+    },
+    {
+      "routeId": "102",
+      "routeNo": "36",
+      "stopId": "99",
+      "seq": 6
+    },
+    {
+      "routeId": "102",
+      "routeNo": "36",
+      "stopId": "80",
+      "seq": 7
+    },
+    {
+      "routeId": "102",
+      "routeNo": "36",
+      "stopId": "78",
+      "seq": 8
+    },
+    {
+      "routeId": "102",
+      "routeNo": "36",
+      "stopId": "318",
+      "seq": 9
+    },
+    {
+      "routeId": "101",
+      "routeNo": "36",
+      "stopId": "317",
+      "seq": 1
+    },
+    {
+      "routeId": "101",
+      "routeNo": "36",
+      "stopId": "100",
+      "seq": 2
+    },
+    {
+      "routeId": "101",
+      "routeNo": "36",
+      "stopId": "295",
+      "seq": 3
+    },
+    {
+      "routeId": "101",
+      "routeNo": "36",
+      "stopId": "98",
+      "seq": 4
+    },
+    {
+      "routeId": "101",
+      "routeNo": "36",
+      "stopId": "95",
+      "seq": 5
+    },
+    {
+      "routeId": "101",
+      "routeNo": "36",
+      "stopId": "327",
+      "seq": 6
+    },
+    {
+      "routeId": "115",
+      "routeNo": "36M",
+      "stopId": "343",
+      "seq": 1
+    },
+    {
+      "routeId": "115",
+      "routeNo": "36M",
+      "stopId": "342",
+      "seq": 2
+    },
+    {
+      "routeId": "115",
+      "routeNo": "36M",
+      "stopId": "329",
+      "seq": 3
+    },
+    {
+      "routeId": "115",
+      "routeNo": "36M",
+      "stopId": "330",
+      "seq": 4
+    },
+    {
+      "routeId": "115",
+      "routeNo": "36M",
+      "stopId": "339",
+      "seq": 5
+    },
+    {
+      "routeId": "100",
+      "routeNo": "36X",
+      "stopId": "309",
+      "seq": 1
+    },
+    {
+      "routeId": "100",
+      "routeNo": "36X",
+      "stopId": "306",
+      "seq": 2
+    },
+    {
+      "routeId": "100",
+      "routeNo": "36X",
+      "stopId": "77",
+      "seq": 3
+    },
+    {
+      "routeId": "100",
+      "routeNo": "36X",
+      "stopId": "327",
+      "seq": 4
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "289",
+      "seq": 1
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "76",
+      "seq": 2
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "309",
+      "seq": 3
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "101",
+      "seq": 4
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "102",
+      "seq": 5
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "103",
+      "seq": 6
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "104",
+      "seq": 7
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "77",
+      "seq": 8
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "78",
+      "seq": 9
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "79",
+      "seq": 10
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "107",
+      "seq": 11
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "108",
+      "seq": 12
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "186",
+      "seq": 13
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "109",
+      "seq": 14
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "110",
+      "seq": 15
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "190",
+      "seq": 16
+    },
+    {
+      "routeId": "78",
+      "routeNo": "37",
+      "stopId": "193",
+      "seq": 17
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "297",
+      "seq": 1
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "191",
+      "seq": 2
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "110",
+      "seq": 3
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "298",
+      "seq": 4
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "111",
+      "seq": 5
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "112",
+      "seq": 6
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "299",
+      "seq": 7
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "310",
+      "seq": 8
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "101",
+      "seq": 9
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "102",
+      "seq": 10
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "103",
+      "seq": 11
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "104",
+      "seq": 12
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "185",
+      "seq": 13
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "88",
+      "seq": 14
+    },
+    {
+      "routeId": "80",
+      "routeNo": "37",
+      "stopId": "89",
+      "seq": 15
+    },
+    {
+      "routeId": "116",
+      "routeNo": "37A",
+      "stopId": "343",
+      "seq": 1
+    },
+    {
+      "routeId": "116",
+      "routeNo": "37A",
+      "stopId": "342",
+      "seq": 2
+    },
+    {
+      "routeId": "116",
+      "routeNo": "37A",
+      "stopId": "329",
+      "seq": 3
+    },
+    {
+      "routeId": "116",
+      "routeNo": "37A",
+      "stopId": "330",
+      "seq": 4
+    },
+    {
+      "routeId": "116",
+      "routeNo": "37A",
+      "stopId": "77",
+      "seq": 5
+    },
+    {
+      "routeId": "116",
+      "routeNo": "37A",
+      "stopId": "321",
+      "seq": 6
+    },
+    {
+      "routeId": "116",
+      "routeNo": "37A",
+      "stopId": "278",
+      "seq": 7
+    },
+    {
+      "routeId": "116",
+      "routeNo": "37A",
+      "stopId": "81",
+      "seq": 8
+    },
+    {
+      "routeId": "116",
+      "routeNo": "37A",
+      "stopId": "331",
+      "seq": 9
+    },
+    {
+      "routeId": "116",
+      "routeNo": "37A",
+      "stopId": "341",
+      "seq": 10
+    },
+    {
+      "routeId": "116",
+      "routeNo": "37A",
+      "stopId": "344",
+      "seq": 11
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "297",
+      "seq": 1
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "191",
+      "seq": 2
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "298",
+      "seq": 3
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "111",
+      "seq": 4
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "112",
+      "seq": 5
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "299",
+      "seq": 6
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "106",
+      "seq": 7
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "78",
+      "seq": 8
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "278",
+      "seq": 9
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "81",
+      "seq": 10
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "185",
+      "seq": 11
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "188",
+      "seq": 12
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "338",
+      "seq": 13
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "74",
+      "seq": 14
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "310",
+      "seq": 15
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "103",
+      "seq": 16
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "104",
+      "seq": 17
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "320",
+      "seq": 18
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "89",
+      "seq": 19
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "322",
+      "seq": 20
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "77",
+      "seq": 21
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "321",
+      "seq": 22
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "332",
+      "seq": 23
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "319",
+      "seq": 24
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "107",
+      "seq": 25
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "108",
+      "seq": 26
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "186",
+      "seq": 27
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "109",
+      "seq": 28
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "194",
+      "seq": 29
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "190",
+      "seq": 30
+    },
+    {
+      "routeId": "96",
+      "routeNo": "37H",
+      "stopId": "193",
+      "seq": 31
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "297",
+      "seq": 1
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "191",
+      "seq": 2
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "192",
+      "seq": 3
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "329",
+      "seq": 4
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "330",
+      "seq": 5
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "78",
+      "seq": 6
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "79",
+      "seq": 7
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "340",
+      "seq": 8
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "324",
+      "seq": 9
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "303",
+      "seq": 10
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "190",
+      "seq": 11
+    },
+    {
+      "routeId": "82",
+      "routeNo": "37M",
+      "stopId": "193",
+      "seq": 12
+    },
+    {
+      "routeId": "63",
+      "routeNo": "37P",
+      "stopId": "104",
+      "seq": 1
+    },
+    {
+      "routeId": "63",
+      "routeNo": "37P",
+      "stopId": "112",
+      "seq": 2
+    },
+    {
+      "routeId": "63",
+      "routeNo": "37P",
+      "stopId": "315",
+      "seq": 3
+    },
+    {
+      "routeId": "75",
+      "routeNo": "37S",
+      "stopId": "106",
+      "seq": 1
+    },
+    {
+      "routeId": "75",
+      "routeNo": "37S",
+      "stopId": "78",
+      "seq": 2
+    },
+    {
+      "routeId": "75",
+      "routeNo": "37S",
+      "stopId": "105",
+      "seq": 3
+    },
+    {
+      "routeId": "30",
+      "routeNo": "38",
+      "stopId": "289",
+      "seq": 1
+    },
+    {
+      "routeId": "30",
+      "routeNo": "38",
+      "stopId": "76",
+      "seq": 2
+    },
+    {
+      "routeId": "30",
+      "routeNo": "38",
+      "stopId": "77",
+      "seq": 3
+    },
+    {
+      "routeId": "30",
+      "routeNo": "38",
+      "stopId": "78",
+      "seq": 4
+    },
+    {
+      "routeId": "30",
+      "routeNo": "38",
+      "stopId": "105",
+      "seq": 5
+    },
+    {
+      "routeId": "30",
+      "routeNo": "38",
+      "stopId": "81",
+      "seq": 6
+    },
+    {
+      "routeId": "30",
+      "routeNo": "38",
+      "stopId": "185",
+      "seq": 7
+    },
+    {
+      "routeId": "30",
+      "routeNo": "38",
+      "stopId": "88",
+      "seq": 8
+    },
+    {
+      "routeId": "30",
+      "routeNo": "38",
+      "stopId": "89",
+      "seq": 9
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "104",
+      "seq": 1
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "185",
+      "seq": 2
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "76",
+      "seq": 3
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "77",
+      "seq": 4
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "78",
+      "seq": 5
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "105",
+      "seq": 6
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "80",
+      "seq": 7
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "81",
+      "seq": 8
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "101",
+      "seq": 9
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "102",
+      "seq": 10
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "103",
+      "seq": 11
+    },
+    {
+      "routeId": "29",
+      "routeNo": "38X",
+      "stopId": "306",
+      "seq": 12
+    },
+    {
+      "routeId": "95",
+      "routeNo": "39M",
+      "stopId": "278",
+      "seq": 1
+    },
+    {
+      "routeId": "95",
+      "routeNo": "39M",
+      "stopId": "81",
+      "seq": 2
+    },
+    {
+      "routeId": "95",
+      "routeNo": "39M",
+      "stopId": "309",
+      "seq": 3
+    },
+    {
+      "routeId": "95",
+      "routeNo": "39M",
+      "stopId": "103",
+      "seq": 4
+    },
+    {
+      "routeId": "95",
+      "routeNo": "39M",
+      "stopId": "306",
+      "seq": 5
+    },
+    {
+      "routeId": "95",
+      "routeNo": "39M",
+      "stopId": "77",
+      "seq": 6
+    },
+    {
+      "routeId": "95",
+      "routeNo": "39M",
+      "stopId": "78",
+      "seq": 7
+    },
+    {
+      "routeId": "95",
+      "routeNo": "39M",
+      "stopId": "79",
+      "seq": 8
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "1",
+      "seq": 1
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "2",
+      "seq": 2
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "3",
+      "seq": 3
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "4",
+      "seq": 4
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "5",
+      "seq": 5
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "6",
+      "seq": 6
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "7",
+      "seq": 7
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "8",
+      "seq": 8
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "9",
+      "seq": 9
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "10",
+      "seq": 10
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "11",
+      "seq": 11
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "12",
+      "seq": 12
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "13",
+      "seq": 13
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "14",
+      "seq": 14
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "15",
+      "seq": 15
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "16",
+      "seq": 16
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "17",
+      "seq": 17
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "18",
+      "seq": 18
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "83",
+      "seq": 19
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "19",
+      "seq": 20
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "20",
+      "seq": 21
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "21",
+      "seq": 22
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "22",
+      "seq": 23
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "23",
+      "seq": 24
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "24",
+      "seq": 25
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "25",
+      "seq": 26
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "26",
+      "seq": 27
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "27",
+      "seq": 28
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "28",
+      "seq": 29
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "246",
+      "seq": 30
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "247",
+      "seq": 31
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "248",
+      "seq": 32
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "249",
+      "seq": 33
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "250",
+      "seq": 34
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "251",
+      "seq": 35
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "252",
+      "seq": 36
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "253",
+      "seq": 37
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "254",
+      "seq": 38
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "255",
+      "seq": 39
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "179",
+      "seq": 40
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "64",
+      "seq": 41
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "65",
+      "seq": 42
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "66",
+      "seq": 43
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "67",
+      "seq": 44
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "68",
+      "seq": 45
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "69",
+      "seq": 46
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "70",
+      "seq": 47
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "71",
+      "seq": 48
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "72",
+      "seq": 49
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "73",
+      "seq": 50
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "74",
+      "seq": 51
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "77",
+      "seq": 52
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "78",
+      "seq": 53
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "79",
+      "seq": 54
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "114",
+      "seq": 55
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "115",
+      "seq": 56
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "116",
+      "seq": 57
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "117",
+      "seq": 58
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "335",
+      "seq": 59
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "308",
+      "seq": 60
+    },
+    {
+      "routeId": "90",
+      "routeNo": "A35",
+      "stopId": "313",
+      "seq": 61
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "307",
+      "seq": 1
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "117",
+      "seq": 2
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "118",
+      "seq": 3
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "120",
+      "seq": 4
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "335",
+      "seq": 5
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "274",
+      "seq": 6
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "277",
+      "seq": 7
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "78",
+      "seq": 8
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "79",
+      "seq": 9
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "80",
+      "seq": 10
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "81",
+      "seq": 11
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "90",
+      "seq": 12
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "94",
+      "seq": 13
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "279",
+      "seq": 14
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "280",
+      "seq": 15
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "282",
+      "seq": 16
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "283",
+      "seq": 17
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "284",
+      "seq": 18
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "286",
+      "seq": 19
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "287",
+      "seq": 20
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "288",
+      "seq": 21
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "273",
+      "seq": 22
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "83",
+      "seq": 23
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "19",
+      "seq": 24
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "20",
+      "seq": 25
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "21",
+      "seq": 26
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "22",
+      "seq": 27
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "23",
+      "seq": 28
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "24",
+      "seq": 29
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "25",
+      "seq": 30
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "26",
+      "seq": 31
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "27",
+      "seq": 32
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "28",
+      "seq": 33
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "246",
+      "seq": 34
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "247",
+      "seq": 35
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "248",
+      "seq": 36
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "249",
+      "seq": 37
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "250",
+      "seq": 38
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "251",
+      "seq": 39
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "252",
+      "seq": 40
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "253",
+      "seq": 41
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "254",
+      "seq": 42
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "255",
+      "seq": 43
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "256",
+      "seq": 44
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "257",
+      "seq": 45
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "258",
+      "seq": 46
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "259",
+      "seq": 47
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "260",
+      "seq": 48
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "261",
+      "seq": 49
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "262",
+      "seq": 50
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "263",
+      "seq": 51
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "264",
+      "seq": 52
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "265",
+      "seq": 53
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "56",
+      "seq": 54
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "266",
+      "seq": 55
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "57",
+      "seq": 56
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "2",
+      "seq": 57
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "3",
+      "seq": 58
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "4",
+      "seq": 59
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "5",
+      "seq": 60
+    },
+    {
+      "routeId": "91",
+      "routeNo": "A35",
+      "stopId": "305",
+      "seq": 61
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "161",
+      "seq": 1
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "135",
+      "seq": 2
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "136",
+      "seq": 3
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "137",
+      "seq": 4
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "138",
+      "seq": 5
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "139",
+      "seq": 6
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "140",
+      "seq": 7
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "141",
+      "seq": 8
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "142",
+      "seq": 9
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "197",
+      "seq": 10
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "199",
+      "seq": 11
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "302",
+      "seq": 12
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "200",
+      "seq": 13
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "201",
+      "seq": 14
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "195",
+      "seq": 15
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "148",
+      "seq": 16
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "149",
+      "seq": 17
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "150",
+      "seq": 18
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "151",
+      "seq": 19
+    },
+    {
+      "routeId": "37",
+      "routeNo": "B2",
+      "stopId": "152",
+      "seq": 20
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "152",
+      "seq": 1
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "196",
+      "seq": 2
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "153",
+      "seq": 3
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "154",
+      "seq": 4
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "147",
+      "seq": 5
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "146",
+      "seq": 6
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "145",
+      "seq": 7
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "144",
+      "seq": 8
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "143",
+      "seq": 9
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "155",
+      "seq": 10
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "156",
+      "seq": 11
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "157",
+      "seq": 12
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "158",
+      "seq": 13
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "159",
+      "seq": 14
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "160",
+      "seq": 15
+    },
+    {
+      "routeId": "38",
+      "routeNo": "B2",
+      "stopId": "134",
+      "seq": 16
+    },
+    {
+      "routeId": "34",
+      "routeNo": "B2P",
+      "stopId": "152",
+      "seq": 1
+    },
+    {
+      "routeId": "34",
+      "routeNo": "B2P",
+      "stopId": "170",
+      "seq": 2
+    },
+    {
+      "routeId": "34",
+      "routeNo": "B2P",
+      "stopId": "171",
+      "seq": 3
+    },
+    {
+      "routeId": "34",
+      "routeNo": "B2P",
+      "stopId": "172",
+      "seq": 4
+    },
+    {
+      "routeId": "34",
+      "routeNo": "B2P",
+      "stopId": "167",
+      "seq": 5
+    },
+    {
+      "routeId": "34",
+      "routeNo": "B2P",
+      "stopId": "166",
+      "seq": 6
+    },
+    {
+      "routeId": "34",
+      "routeNo": "B2P",
+      "stopId": "173",
+      "seq": 7
+    },
+    {
+      "routeId": "34",
+      "routeNo": "B2P",
+      "stopId": "174",
+      "seq": 8
+    },
+    {
+      "routeId": "34",
+      "routeNo": "B2P",
+      "stopId": "175",
+      "seq": 9
+    },
+    {
+      "routeId": "34",
+      "routeNo": "B2P",
+      "stopId": "162",
+      "seq": 10
+    },
+    {
+      "routeId": "33",
+      "routeNo": "B2P",
+      "stopId": "203",
+      "seq": 1
+    },
+    {
+      "routeId": "33",
+      "routeNo": "B2P",
+      "stopId": "163",
+      "seq": 2
+    },
+    {
+      "routeId": "33",
+      "routeNo": "B2P",
+      "stopId": "164",
+      "seq": 3
+    },
+    {
+      "routeId": "33",
+      "routeNo": "B2P",
+      "stopId": "165",
+      "seq": 4
+    },
+    {
+      "routeId": "33",
+      "routeNo": "B2P",
+      "stopId": "205",
+      "seq": 5
+    },
+    {
+      "routeId": "33",
+      "routeNo": "B2P",
+      "stopId": "206",
+      "seq": 6
+    },
+    {
+      "routeId": "33",
+      "routeNo": "B2P",
+      "stopId": "168",
+      "seq": 7
+    },
+    {
+      "routeId": "33",
+      "routeNo": "B2P",
+      "stopId": "169",
+      "seq": 8
+    },
+    {
+      "routeId": "33",
+      "routeNo": "B2P",
+      "stopId": "207",
+      "seq": 9
+    },
+    {
+      "routeId": "33",
+      "routeNo": "B2P",
+      "stopId": "152",
+      "seq": 10
+    },
+    {
+      "routeId": "36",
+      "routeNo": "B2X",
+      "stopId": "152",
+      "seq": 1
+    },
+    {
+      "routeId": "36",
+      "routeNo": "B2X",
+      "stopId": "170",
+      "seq": 2
+    },
+    {
+      "routeId": "36",
+      "routeNo": "B2X",
+      "stopId": "176",
+      "seq": 3
+    },
+    {
+      "routeId": "35",
+      "routeNo": "B2X",
+      "stopId": "176",
+      "seq": 1
+    },
+    {
+      "routeId": "35",
+      "routeNo": "B2X",
+      "stopId": "169",
+      "seq": 2
+    },
+    {
+      "routeId": "35",
+      "routeNo": "B2X",
+      "stopId": "207",
+      "seq": 3
+    },
+    {
+      "routeId": "35",
+      "routeNo": "B2X",
+      "stopId": "152",
+      "seq": 4
+    },
+    {
+      "routeId": "87",
+      "routeNo": "B4",
+      "stopId": "307",
+      "seq": 1
+    },
+    {
+      "routeId": "87",
+      "routeNo": "B4",
+      "stopId": "117",
+      "seq": 2
+    },
+    {
+      "routeId": "87",
+      "routeNo": "B4",
+      "stopId": "118",
+      "seq": 3
+    },
+    {
+      "routeId": "87",
+      "routeNo": "B4",
+      "stopId": "120",
+      "seq": 4
+    },
+    {
+      "routeId": "87",
+      "routeNo": "B4",
+      "stopId": "335",
+      "seq": 5
+    },
+    {
+      "routeId": "87",
+      "routeNo": "B4",
+      "stopId": "308",
+      "seq": 6
+    },
+    {
+      "routeId": "87",
+      "routeNo": "B4",
+      "stopId": "313",
+      "seq": 7
+    },
+    {
+      "routeId": "89",
+      "routeNo": "B6",
+      "stopId": "309",
+      "seq": 1
+    },
+    {
+      "routeId": "89",
+      "routeNo": "B6",
+      "stopId": "103",
+      "seq": 2
+    },
+    {
+      "routeId": "89",
+      "routeNo": "B6",
+      "stopId": "306",
+      "seq": 3
+    },
+    {
+      "routeId": "89",
+      "routeNo": "B6",
+      "stopId": "77",
+      "seq": 4
+    },
+    {
+      "routeId": "89",
+      "routeNo": "B6",
+      "stopId": "317",
+      "seq": 5
+    },
+    {
+      "routeId": "89",
+      "routeNo": "B6",
+      "stopId": "308",
+      "seq": 6
+    },
+    {
+      "routeId": "89",
+      "routeNo": "B6",
+      "stopId": "313",
+      "seq": 7
+    },
+    {
+      "routeId": "88",
+      "routeNo": "B6",
+      "stopId": "307",
+      "seq": 1
+    },
+    {
+      "routeId": "88",
+      "routeNo": "B6",
+      "stopId": "78",
+      "seq": 2
+    },
+    {
+      "routeId": "88",
+      "routeNo": "B6",
+      "stopId": "79",
+      "seq": 3
+    },
+    {
+      "routeId": "88",
+      "routeNo": "B6",
+      "stopId": "81",
+      "seq": 4
+    },
+    {
+      "routeId": "88",
+      "routeNo": "B6",
+      "stopId": "310",
+      "seq": 5
+    },
+    {
+      "routeId": "111",
+      "routeNo": "B6S",
+      "stopId": "309",
+      "seq": 1
+    },
+    {
+      "routeId": "111",
+      "routeNo": "B6S",
+      "stopId": "103",
+      "seq": 2
+    },
+    {
+      "routeId": "111",
+      "routeNo": "B6S",
+      "stopId": "306",
+      "seq": 3
+    },
+    {
+      "routeId": "111",
+      "routeNo": "B6S",
+      "stopId": "77",
+      "seq": 4
+    },
+    {
+      "routeId": "111",
+      "routeNo": "B6S",
+      "stopId": "316",
+      "seq": 5
+    },
+    {
+      "routeId": "111",
+      "routeNo": "B6S",
+      "stopId": "308",
+      "seq": 6
+    },
+    {
+      "routeId": "111",
+      "routeNo": "B6S",
+      "stopId": "313",
+      "seq": 7
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "1",
+      "seq": 1
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "6",
+      "seq": 2
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "7",
+      "seq": 3
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "8",
+      "seq": 4
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "9",
+      "seq": 5
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "10",
+      "seq": 6
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "11",
+      "seq": 7
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "12",
+      "seq": 8
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "13",
+      "seq": 9
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "14",
+      "seq": 10
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "15",
+      "seq": 11
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "16",
+      "seq": 12
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "17",
+      "seq": 13
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "18",
+      "seq": 14
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "83",
+      "seq": 15
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "19",
+      "seq": 16
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "20",
+      "seq": 17
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "21",
+      "seq": 18
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "22",
+      "seq": 19
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "23",
+      "seq": 20
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "24",
+      "seq": 21
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "25",
+      "seq": 22
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "26",
+      "seq": 23
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "27",
+      "seq": 24
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "28",
+      "seq": 25
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "31",
+      "seq": 26
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "178",
+      "seq": 27
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "33",
+      "seq": 28
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "34",
+      "seq": 29
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "35",
+      "seq": 30
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "36",
+      "seq": 31
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "37",
+      "seq": 32
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "38",
+      "seq": 33
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "39",
+      "seq": 34
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "41",
+      "seq": 35
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "42",
+      "seq": 36
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "58",
+      "seq": 37
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "44",
+      "seq": 38
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "45",
+      "seq": 39
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "46",
+      "seq": 40
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "47",
+      "seq": 41
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "48",
+      "seq": 42
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "49",
+      "seq": 43
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "84",
+      "seq": 44
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "51",
+      "seq": 45
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "52",
+      "seq": 46
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "53",
+      "seq": 47
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "54",
+      "seq": 48
+    },
+    {
+      "routeId": "40",
+      "routeNo": "N1",
+      "stopId": "55",
+      "seq": 49
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "1",
+      "seq": 1
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "6",
+      "seq": 2
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "7",
+      "seq": 3
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "8",
+      "seq": 4
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "9",
+      "seq": 5
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "10",
+      "seq": 6
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "11",
+      "seq": 7
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "12",
+      "seq": 8
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "13",
+      "seq": 9
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "14",
+      "seq": 10
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "15",
+      "seq": 11
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "16",
+      "seq": 12
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "17",
+      "seq": 13
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "18",
+      "seq": 14
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "83",
+      "seq": 15
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "19",
+      "seq": 16
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "20",
+      "seq": 17
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "21",
+      "seq": 18
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "22",
+      "seq": 19
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "23",
+      "seq": 20
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "24",
+      "seq": 21
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "25",
+      "seq": 22
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "26",
+      "seq": 23
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "27",
+      "seq": 24
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "28",
+      "seq": 25
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "246",
+      "seq": 26
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "247",
+      "seq": 27
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "248",
+      "seq": 28
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "249",
+      "seq": 29
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "250",
+      "seq": 30
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "251",
+      "seq": 31
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "252",
+      "seq": 32
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "253",
+      "seq": 33
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "254",
+      "seq": 34
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "255",
+      "seq": 35
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "179",
+      "seq": 36
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "64",
+      "seq": 37
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "65",
+      "seq": 38
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "66",
+      "seq": 39
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "67",
+      "seq": 40
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "68",
+      "seq": 41
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "69",
+      "seq": 42
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "70",
+      "seq": 43
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "71",
+      "seq": 44
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "72",
+      "seq": 45
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "73",
+      "seq": 46
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "74",
+      "seq": 47
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "185",
+      "seq": 48
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "76",
+      "seq": 49
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "77",
+      "seq": 50
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "121",
+      "seq": 51
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "122",
+      "seq": 52
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "124",
+      "seq": 53
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "125",
+      "seq": 54
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "115",
+      "seq": 55
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "116",
+      "seq": 56
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "117",
+      "seq": 57
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "308",
+      "seq": 58
+    },
+    {
+      "routeId": "92",
+      "routeNo": "N35",
+      "stopId": "313",
+      "seq": 59
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "307",
+      "seq": 1
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "117",
+      "seq": 2
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "118",
+      "seq": 3
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "120",
+      "seq": 4
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "274",
+      "seq": 5
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "187",
+      "seq": 6
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "126",
+      "seq": 7
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "122",
+      "seq": 8
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "276",
+      "seq": 9
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "78",
+      "seq": 10
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "79",
+      "seq": 11
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "80",
+      "seq": 12
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "81",
+      "seq": 13
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "185",
+      "seq": 14
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "76",
+      "seq": 15
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "90",
+      "seq": 16
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "94",
+      "seq": 17
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "279",
+      "seq": 18
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "280",
+      "seq": 19
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "282",
+      "seq": 20
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "283",
+      "seq": 21
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "284",
+      "seq": 22
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "286",
+      "seq": 23
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "287",
+      "seq": 24
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "288",
+      "seq": 25
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "273",
+      "seq": 26
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "83",
+      "seq": 27
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "19",
+      "seq": 28
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "20",
+      "seq": 29
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "21",
+      "seq": 30
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "22",
+      "seq": 31
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "23",
+      "seq": 32
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "24",
+      "seq": 33
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "25",
+      "seq": 34
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "26",
+      "seq": 35
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "27",
+      "seq": 36
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "28",
+      "seq": 37
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "246",
+      "seq": 38
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "247",
+      "seq": 39
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "248",
+      "seq": 40
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "249",
+      "seq": 41
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "250",
+      "seq": 42
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "251",
+      "seq": 43
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "252",
+      "seq": 44
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "253",
+      "seq": 45
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "254",
+      "seq": 46
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "255",
+      "seq": 47
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "256",
+      "seq": 48
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "257",
+      "seq": 49
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "258",
+      "seq": 50
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "259",
+      "seq": 51
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "260",
+      "seq": 52
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "261",
+      "seq": 53
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "262",
+      "seq": 54
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "263",
+      "seq": 55
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "264",
+      "seq": 56
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "265",
+      "seq": 57
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "56",
+      "seq": 58
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "266",
+      "seq": 59
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "57",
+      "seq": 60
+    },
+    {
+      "routeId": "93",
+      "routeNo": "N35",
+      "stopId": "305",
+      "seq": 61
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "297",
+      "seq": 1
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "191",
+      "seq": 2
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "298",
+      "seq": 3
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "111",
+      "seq": 4
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "112",
+      "seq": 5
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "299",
+      "seq": 6
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "78",
+      "seq": 7
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "105",
+      "seq": 8
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "107",
+      "seq": 9
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "108",
+      "seq": 10
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "186",
+      "seq": 11
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "109",
+      "seq": 12
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "194",
+      "seq": 13
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "190",
+      "seq": 14
+    },
+    {
+      "routeId": "86",
+      "routeNo": "N37",
+      "stopId": "193",
+      "seq": 15
+    },
+    {
+      "routeId": "44",
+      "routeNo": "N38",
+      "stopId": "289",
+      "seq": 1
+    },
+    {
+      "routeId": "44",
+      "routeNo": "N38",
+      "stopId": "76",
+      "seq": 2
+    },
+    {
+      "routeId": "44",
+      "routeNo": "N38",
+      "stopId": "77",
+      "seq": 3
+    },
+    {
+      "routeId": "44",
+      "routeNo": "N38",
+      "stopId": "78",
+      "seq": 4
+    },
+    {
+      "routeId": "44",
+      "routeNo": "N38",
+      "stopId": "105",
+      "seq": 5
+    },
+    {
+      "routeId": "45",
+      "routeNo": "N38",
+      "stopId": "105",
+      "seq": 1
+    },
+    {
+      "routeId": "45",
+      "routeNo": "N38",
+      "stopId": "81",
+      "seq": 2
+    },
+    {
+      "routeId": "45",
+      "routeNo": "N38",
+      "stopId": "185",
+      "seq": 3
+    },
+    {
+      "routeId": "45",
+      "routeNo": "N38",
+      "stopId": "88",
+      "seq": 4
+    },
+    {
+      "routeId": "45",
+      "routeNo": "N38",
+      "stopId": "89",
+      "seq": 5
+    },
+    {
+      "routeId": "110",
+      "routeNo": "NB2",
+      "stopId": "152",
+      "seq": 1
+    },
+    {
+      "routeId": "110",
+      "routeNo": "NB2",
+      "stopId": "170",
+      "seq": 2
+    },
+    {
+      "routeId": "110",
+      "routeNo": "NB2",
+      "stopId": "134",
+      "seq": 3
+    },
+    {
+      "routeId": "110",
+      "routeNo": "NB2",
+      "stopId": "152",
+      "seq": 4
+    },
+    {
+      "routeId": "109",
+      "routeNo": "X11R",
+      "stopId": "221",
+      "seq": 1
+    },
+    {
+      "routeId": "109",
+      "routeNo": "X11R",
+      "stopId": "235",
+      "seq": 2
+    },
+    {
+      "routeId": "109",
+      "routeNo": "X11R",
+      "stopId": "247",
+      "seq": 3
+    },
+    {
+      "routeId": "109",
+      "routeNo": "X11R",
+      "stopId": "65",
+      "seq": 4
+    },
+    {
+      "routeId": "109",
+      "routeNo": "X11R",
+      "stopId": "77",
+      "seq": 5
+    },
+    {
+      "routeId": "109",
+      "routeNo": "X11R",
+      "stopId": "78",
+      "seq": 6
+    },
+    {
+      "routeId": "109",
+      "routeNo": "X11R",
+      "stopId": "334",
+      "seq": 7
+    },
+    {
+      "routeId": "108",
+      "routeNo": "X11R",
+      "stopId": "333",
+      "seq": 1
+    },
+    {
+      "routeId": "108",
+      "routeNo": "X11R",
+      "stopId": "77",
+      "seq": 2
+    },
+    {
+      "routeId": "108",
+      "routeNo": "X11R",
+      "stopId": "288",
+      "seq": 3
+    },
+    {
+      "routeId": "108",
+      "routeNo": "X11R",
+      "stopId": "26",
+      "seq": 4
+    },
+    {
+      "routeId": "108",
+      "routeNo": "X11R",
+      "stopId": "41",
+      "seq": 5
+    },
+    {
+      "routeId": "108",
+      "routeNo": "X11R",
+      "stopId": "55",
+      "seq": 6
+    },
+    {
+      "routeId": "113",
+      "routeNo": "XB2",
+      "stopId": "161",
+      "seq": 1
+    },
+    {
+      "routeId": "113",
+      "routeNo": "XB2",
+      "stopId": "135",
+      "seq": 2
+    },
+    {
+      "routeId": "113",
+      "routeNo": "XB2",
+      "stopId": "136",
+      "seq": 3
+    },
+    {
+      "routeId": "113",
+      "routeNo": "XB2",
+      "stopId": "137",
+      "seq": 4
+    },
+    {
+      "routeId": "113",
+      "routeNo": "XB2",
+      "stopId": "138",
+      "seq": 5
+    },
+    {
+      "routeId": "113",
+      "routeNo": "XB2",
+      "stopId": "139",
+      "seq": 6
+    },
+    {
+      "routeId": "113",
+      "routeNo": "XB2",
+      "stopId": "152",
+      "seq": 7
+    },
+    {
+      "routeId": "114",
+      "routeNo": "XB2",
+      "stopId": "152",
+      "seq": 1
+    },
+    {
+      "routeId": "114",
+      "routeNo": "XB2",
+      "stopId": "157",
+      "seq": 2
+    },
+    {
+      "routeId": "114",
+      "routeNo": "XB2",
+      "stopId": "158",
+      "seq": 3
+    },
+    {
+      "routeId": "114",
+      "routeNo": "XB2",
+      "stopId": "159",
+      "seq": 4
+    },
+    {
+      "routeId": "114",
+      "routeNo": "XB2",
+      "stopId": "160",
+      "seq": 5
+    },
+    {
+      "routeId": "114",
+      "routeNo": "XB2",
+      "stopId": "134",
+      "seq": 6
+    }
+  ]
+}
